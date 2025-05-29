@@ -35,6 +35,23 @@
   width: 100%;
 }
 
+.mobile-menu {
+  background: linear-gradient(270deg, #0a324b, #061e2c);
+  background-size: 400% 400%;
+  animation: gradientShift 10s ease infinite;
+}
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 .lang-btn {
   position: relative;
   font-size: clamp(1rem, 0.571rem + 0.893vw, 1.375rem);

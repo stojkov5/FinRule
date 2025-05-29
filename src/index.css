@@ -62,3 +62,24 @@
   font-weight: 900;
   font-style: normal;
 }
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(270deg, #0a324b, #061e2c);
+  background-size: 400% 400%;
+  animation: gradientShift 10s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+

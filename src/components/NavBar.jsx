@@ -5,6 +5,7 @@ import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import LanguageSwitcher from "../components/LanguageSwitcher";
 import { useTranslation } from "react-i18next";
+import { Row, Col } from "antd";
 import "../styles/Navbar.css";
 // Animation Variants
 const backdropVariants = {
@@ -44,108 +45,112 @@ const Navbar = () => {
   }, [isOpen]);
 
   return (
-    <nav className="bg-transparent absolute top-0 left-0 w-full px-4 py-10 md:px-8 z-50">
-      <div className=" relative max-w-7xl m-auto flex items-center justify-between md:justify-center">
-        {/* Logo */}
-        <div className=" absolute left-0 text-xl font-bold text-gray-800">
-          <img src="./FinRule.png" alt="FinRule" className="h-30" />
-        </div>
+    <nav className=" absolute bg-transparent  w-full z-50">
+      <Row justify={"center"} className="w-full">
+        <Col span={20} className="w-full">
+          <div className=" relative max-w-7xl m-auto flex items-center justify-between ">
+            {/* Logo */}
+            <div className=" text-xl font-bold text-gray-800">
+              <img src="./FinRule.png" alt="FinRule" className="h-30" />
+            </div>
 
-        {/* Desktop menu */}
-        <div className="hidden md:flex space-x-6 montserrat-600 ">
-          <NavLink to="/" className="nav-link ">
-            {t("nav.home")}
-          </NavLink>
-          <NavLink to="/about" className="nav-link">
-            {t("nav.about")}
-          </NavLink>
-          <NavLink to="/contact" className="nav-link">
-            {t("nav.contact")}
-          </NavLink>
-        </div>
-        <div className="hidden md:flex absolute right-0 flex items-center space-x-4">
-          {/* Language Switcher */}
-          <LanguageSwitcher />
-        </div>
+            {/* Desktop menu */}
+            <div className="hidden md:flex space-x-6 montserrat-600 ">
+              <NavLink to="/" className="nav-link ">
+                {t("nav.home")}
+              </NavLink>
+              <NavLink to="/about" className="nav-link">
+                {t("nav.about")}
+              </NavLink>
+              <NavLink to="/contact" className="nav-link">
+                {t("nav.contact")}
+              </NavLink>
+            </div>
+            <div className="hidden md:flex  flex items-center space-x-4">
+              {/* Language Switcher */}
+              <LanguageSwitcher />
+            </div>
 
-        {/* Mobile menu toggle */}
-        <div className="md:hidden flex items-center justify-end w-full">
-          <button
-            onClick={toggleMenu}
-            className="text-white focus:outline-none"
-          >
-            {isOpen ? (
-              <motion.div
-                animate={{ rotate: 180 }}
-                transition={{ duration: 0.3 }}
+            {/* Mobile menu toggle */}
+            <div className="md:hidden flex items-center justify-end w-full">
+              <button
+                onClick={toggleMenu}
+                className="text-white focus:outline-none"
               >
-                <X size={24} />
-              </motion.div>
-            ) : (
-              <motion.div
-                animate={{ rotate: 0 }}
-                transition={{ duration: 0.3 }}
-              >
-                <Menu size={24} />
-              </motion.div>
-            )}
-          </button>
-        </div>
-      </div>
-
-      {/* Backdrop + Fullscreen Mobile Menu */}
-      <AnimatePresence>
-        {isOpen && (
-          <>
-            {/* Dark semi-transparent background */}
-            <motion.div
-              key="backdrop"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 0.5 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.3 }}
-              className="fixed inset-0 bg-black z-30"
-              onClick={toggleMenu} // close when backdrop is clicked
-            />
-
-            {/* Fullscreen menu */}
-            <motion.div
-              key="fullscreen-menu"
-              initial="closed"
-              animate="open"
-              exit="closed"
-              variants={backdropVariants}
-              className="fixed top-0 left-0 w-full h-full bg-dark/50 text-gray-700 md:hidden z-40"
-            >
-              {/* Close Button */}
-              <div className="flex justify-end p-4 pt-10">
-                <button onClick={toggleMenu} className="text-white">
-                  <X size={24} />
-                </button>
-              </div>
-
-              {/* Navigation Links */}
-              <div className="flex flex-col items-center justify-center h-full space-y-6 text-xl">
-                {["/", "/about", "/contact"].map((path, idx) => (
-                  <motion.div key={idx} variants={itemVariants}>
-                    <NavLink
-                      to={path}
-                      onClick={toggleMenu}
-                      className="nav-link montserrat-600"
-                    >
-                      {t(`nav.${path === "/" ? "home" : path.slice(1)}`)}
-                    </NavLink>
+                {isOpen ? (
+                  <motion.div
+                    animate={{ rotate: 180 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <X size={24} />
                   </motion.div>
-                ))}
-                <div className="flex items-center space-x-4">
-                  {/* Language Switcher */}
-                  <LanguageSwitcher />
-                </div>
-              </div>
-            </motion.div>
-          </>
-        )}
-      </AnimatePresence>
+                ) : (
+                  <motion.div
+                    animate={{ rotate: 0 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <Menu size={24} />
+                  </motion.div>
+                )}
+              </button>
+            </div>
+          </div>
+
+          {/* Backdrop + Fullscreen Mobile Menu */}
+          <AnimatePresence>
+            {isOpen && (
+              <>
+                {/* Dark semi-transparent background */}
+                <motion.div
+                  key="backdrop"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 0.5 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.3 }}
+                  className="fixed inset-0 bg-black z-30"
+                  onClick={toggleMenu}  // close when backdrop is clicked
+                />
+
+                {/* Fullscreen menu */}
+                <motion.div
+                  key="fullscreen-menu"
+                  initial="closed"
+                  animate="open"
+                  exit="closed"
+                  variants={backdropVariants}
+                  className="fixed top-0 left-0 w-full h-full mobile-menu text-gray-700 md:hidden z-40"
+                >
+                  {/* Close Button */}
+                  <div className="flex justify-end p-4  ">
+                    <button onClick={toggleMenu} className="text-white absolute top-12 right-12">
+                      <X size={24} />
+                    </button>
+                  </div>
+
+                  {/* Navigation Links */}
+                  <div className="flex flex-col items-center justify-center h-full space-y-6 text-xl">
+                    {["/", "/about", "/contact"].map((path, idx) => (
+                      <motion.div key={idx} variants={itemVariants}>
+                        <NavLink
+                          to={path}
+                          onClick={toggleMenu}
+                          className="nav-link montserrat-600"
+                        >
+                          {t(`nav.${path === "/" ? "home" : path.slice(1)}`)}
+                        </NavLink>
+                      </motion.div>
+                    ))}
+                    <div className="flex items-center space-x-4">
+                      {/* Language Switcher */}
+                      <LanguageSwitcher />
+                    </div>
+                  </div>
+                </motion.div>
+              </>
+            )}
+          </AnimatePresence>
+        </Col>
+      </Row>
     </nav>
   );
 };
