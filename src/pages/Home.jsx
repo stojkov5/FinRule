@@ -1,21 +1,32 @@
+/* eslint-disable no-unused-vars */
 import Logo from "/FinRule.png";
 import "../styles/Home.css";
 import { Row, Col } from "antd";
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
-
+import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
+import { TypeAnimation } from "react-type-animation";
+// Animation Variants
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
 };
 
+const fadeInStaggerContainer = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.3,
+    },
+  },
+};
+
+const scaleIn = {
+  hidden: { opacity: 0, scale: 0.8 },
+  visible: { opacity: 1, scale: 1, transition: { duration: 0.6 } },
+};
+
 const Home = () => {
-  const refHeadline = useRef(null);
-  const refSubheadline = useRef(null);
-  const refMobile = useRef(null);
-  const inViewHeadline = useInView(refHeadline, { once: true });
-  const inViewSubheadline = useInView(refSubheadline, { once: true });
-  const inViewMobile = useInView(refMobile, { once: true });
+  const { t } = useTranslation();
 
   return (
     <>
@@ -24,15 +35,20 @@ const Home = () => {
           <Row className="md:pt-30 pt-10">
             <Col span={12}>
               <div className="hidden md:flex w-full h-full items-center justify-center text-white text-center montserrat-600">
-                <motion.h1
-                  className="landing-text"
-                  ref={refHeadline}
+                <motion.div
                   variants={fadeInUp}
                   initial="hidden"
-                  animate={inViewHeadline ? "visible" : "hidden"}
+                  whileInView="visible"
+                  viewport={{ once: true }}
                 >
-                  TRANSFORMING Banking Through Precision Automation
-                </motion.h1>
+                  <TypeAnimation
+                    sequence={[t("home.firstHeading"), 2000]}
+                    wrapper="h1"
+                    cursor={true}
+                    repeat={Infinity}
+                    className="landing-text text-white montserrat-600"
+                  />
+                </motion.div>
               </div>
             </Col>
 
@@ -41,9 +57,10 @@ const Home = () => {
                 <motion.img
                   src={Logo}
                   alt="FinRule Logo"
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={inViewHeadline ? { opacity: 1, scale: 1 } : {}}
-                  transition={{ duration: 0.8, delay: 0.3 }}
+                  variants={scaleIn}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
                 />
               </div>
             </Col>
@@ -51,15 +68,13 @@ const Home = () => {
             <Col span={24}>
               <div className="hidden md:flex items-center justify-center w-full h-full">
                 <motion.h1
-                  className="w-full text-white text-center montserrat-600 home-subheadline"
-                  ref={refSubheadline}
+                  className="w-full text-white text-center montserrat-600 home-text"
                   variants={fadeInUp}
                   initial="hidden"
-                  animate={inViewSubheadline ? "visible" : "hidden"}
+                  whileInView="visible"
+                  viewport={{ once: true }}
                 >
-                  Revolutionize the way your financial institution operates.
-                  Experience faster decision-making, streamlined operations, and
-                  enhanced customer engagement with FinRule.
+                  {t("home.subHeading")}
                 </motion.h1>
               </div>
             </Col>
@@ -71,26 +86,83 @@ const Home = () => {
       <motion.div
         className="md:hidden relative w-full h-screen bg-cover bg-center flex items-center justify-center text-center px-6"
         style={{ backgroundImage: `url(${Logo})` }}
-        ref={refMobile}
         initial={{ opacity: 0 }}
-        animate={inViewMobile ? { opacity: 1 } : {}}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
         transition={{ duration: 1 }}
       >
         <motion.div
           variants={fadeInUp}
           initial="hidden"
-          animate={inViewMobile ? "visible" : "hidden"}
+          whileInView="visible"
+          viewport={{ once: true }}
         >
-          <h1 className="landing-text">
-            TRANSFORMING Banking Through Precision Automation
+          <h1 className="landing-text text-white montserrat-600">
+            {t("home.firstHeading")}
           </h1>
-          <p className="landing-text">
-            Revolutionize the way your financial institution operates.
-            Experience faster decision-making, streamlined operations, and
-            enhanced customer engagement with FinRule.
+          <p className="landing-text text-white montserrat-600">
+            {t("home.subHeading")}
           </p>
         </motion.div>
       </motion.div>
+
+      {/* Animated Content Sections */}
+      <Row justify={"center"} className="mt-10">
+        <Col span={20}>
+          <motion.div
+            className="h-full w-full p-5 bg-blue-100/10 rounded backdrop-blur-md"
+            variants={fadeInUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            <p className="text-white montserrat-600 home-text">
+              {t("home.intro")}
+            </p>
+          </motion.div>
+        </Col>
+
+        <Col span={20} className="mt-10">
+          <motion.div
+            className="h-full w-full p-5 bg-blue-100/10 rounded backdrop-blur-md"
+            variants={fadeInUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            <TypeAnimation
+              sequence={[t("home.experience"), 1000]}
+              wrapper="h1"
+              cursor={true}
+              repeat={Infinity}
+              className="text-white text-center montserrat-600 home-text"
+            ></TypeAnimation>
+
+            <motion.div
+              className="flex justify-center gap-4 mt-5"
+              variants={fadeInStaggerContainer}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+            >
+              <motion.button
+                whileTap={{ scale: 0.95 }}
+                className="montserrat-600 home-btn rounded-full px-5 py-3"
+                variants={fadeInUp}
+              >
+                {t("home.buttons.requestDemo")}
+              </motion.button>
+              <motion.button
+                whileTap={{ scale: 0.95 }}
+                className="montserrat-600 home-btn rounded-full px-5 py-3"
+                variants={fadeInUp}
+              >
+                {t("home.buttons.learn")}
+              </motion.button>
+            </motion.div>
+          </motion.div>
+        </Col>
+      </Row>
     </>
   );
 };

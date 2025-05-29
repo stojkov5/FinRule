@@ -51,7 +51,7 @@ const Navbar = () => {
           <div className=" relative max-w-7xl m-auto flex items-center justify-between ">
             {/* Logo */}
             <div className=" text-xl font-bold text-gray-800">
-              <img src="./FinRule.png" alt="FinRule" className="h-30" />
+              <img src="./FinRule.png" alt="FinRule" className="h-30 object-contain" />
             </div>
 
             {/* Desktop menu */}
@@ -65,8 +65,11 @@ const Navbar = () => {
               <NavLink to="/contact" className="nav-link">
                 {t("nav.contact")}
               </NavLink>
+              <NavLink to="/product" className="nav-link">
+                {t("nav.product")}
+              </NavLink>
             </div>
-            <div className="hidden md:flex  flex items-center space-x-4">
+            <div className="hidden md:flex  items-center space-x-4">
               {/* Language Switcher */}
               <LanguageSwitcher />
             </div>
@@ -108,7 +111,7 @@ const Navbar = () => {
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.3 }}
                   className="fixed inset-0 bg-black z-30"
-                  onClick={toggleMenu}  // close when backdrop is clicked
+                  onClick={toggleMenu} // close when backdrop is clicked
                 />
 
                 {/* Fullscreen menu */}
@@ -122,24 +125,29 @@ const Navbar = () => {
                 >
                   {/* Close Button */}
                   <div className="flex justify-end p-4  ">
-                    <button onClick={toggleMenu} className="text-white absolute top-12 right-12">
+                    <button
+                      onClick={toggleMenu}
+                      className="text-white absolute top-12 right-12"
+                    >
                       <X size={24} />
                     </button>
                   </div>
 
                   {/* Navigation Links */}
                   <div className="flex flex-col items-center justify-center h-full space-y-6 text-xl">
-                    {["/", "/about", "/contact"].map((path, idx) => (
-                      <motion.div key={idx} variants={itemVariants}>
-                        <NavLink
-                          to={path}
-                          onClick={toggleMenu}
-                          className="nav-link montserrat-600"
-                        >
-                          {t(`nav.${path === "/" ? "home" : path.slice(1)}`)}
-                        </NavLink>
-                      </motion.div>
-                    ))}
+                    {["/", "/about", "/contact", "/product"].map(
+                      (path, idx) => (
+                        <motion.div key={idx} variants={itemVariants}>
+                          <NavLink
+                            to={path}
+                            onClick={toggleMenu}
+                            className="nav-link montserrat-600"
+                          >
+                            {t(`nav.${path === "/" ? "home" : path.slice(1)}`)}
+                          </NavLink>
+                        </motion.div>
+                      )
+                    )}
                     <div className="flex items-center space-x-4">
                       {/* Language Switcher */}
                       <LanguageSwitcher />

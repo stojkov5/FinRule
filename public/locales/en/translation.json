@@ -2,6 +2,17 @@
   "nav": {
     "home": "HOME",
     "about": "ABOUT",
-    "contact": "CONTACT"
+    "contact": "CONTACT",
+    "product": "PRODUCT"
+  },
+  "home": {
+    "firstHeading": " TRANSFORMING Banking Through Precision Automation",
+    "subHeading": " Revolutionize the way your financial institution operates. Experience faster decision-making, streamlined operations, and enhanced customer engagement with FinRule.",
+    "intro": " FinRule is the next-generation Loan Origination System (LOS) built for midsize banks and credit unions. Our intelligent automation platform enables financial institutions to digitize and optimize every step of the lending journey—from online applications and credit analysis to digital document management and compliance tracking.",
+    "experience": "Experience intelligent lending. Request a demo today or explore how FinRule can fit into your banking infrastructure.",
+    "buttons": {
+      "requestDemo": "Request Demo",
+      "learn": "Learn More"
+    }
   }
 }

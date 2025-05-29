@@ -17,6 +17,31 @@
 .home-subheadline {
   font-size: clamp(1rem, 0.571rem + 0.893vw, 1.375rem);
 }
+.home-btn {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  width: 20%;
+  transition: background-color 1s ease-in-out, color 0.5s ease-in-out;
+}
+.home-btn:hover {
+  background-color: #0a324b;
+  color: #93c5fd;
+}
+.home-text {
+  font-size: 0.75rem;
+  font-size: clamp(
+    0.75rem,
+    0.5714285714285714rem + 0.8928571428571428vw,
+    1.375rem
+  );
+}
+@media (max-width: 1024px) {
+  .home-btn {
+    width: 30%;
+  }
+}
+
 @media (max-width: 768px) {
   .landing-text {
     font-size: 1rem;
@@ -25,5 +50,8 @@
       0.5982142857142858rem + 2.008928571428571vw,
       1.5625rem
     );
+  }
+  .home-btn {
+    width: 50%;
   }
 }
