@@ -1,0 +1,64 @@
+.nav-link {
+  position: relative;
+  font-size: clamp(1rem, 0.571rem + 0.893vw, 1.375rem);
+  color: white;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+  text-decoration: none;
+  padding-bottom: 4px;
+  transition: color 0.3s ease;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+  width: 0%;
+  height: 2px;
+  background-color: #93c5fd; /* Tailwind blue-300 */
+  transition: width 0.5s ease;
+}
+
+.nav-link:hover {
+  color: #93c5fd;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.active-link {
+  color: #93c5fd;
+}
+
+.active-link::after {
+  width: 100%;
+}
+
+.lang-btn {
+  position: relative;
+  font-size: clamp(1rem, 0.571rem + 0.893vw, 1.375rem);
+  color: white;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+  text-decoration: none;
+  padding-bottom: 4px;
+  transition: color 0.3s ease;
+}
+
+.lang-btn:hover {
+  color: #93c5fd;
+}
+
+.active-lang {
+  color: #93c5fd;
+}
+
+.active-lang::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #93c5fd;
+}
