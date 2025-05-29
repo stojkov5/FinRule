@@ -39,7 +39,7 @@ const Home = () => {
                   variants={fadeInUp}
                   initial="hidden"
                   whileInView="visible"
-                  viewport={{ once: true }}
+                  viewport={{ once: false, amount: 0.2 }}
                 >
                   <TypeAnimation
                     sequence={[t("home.firstHeading"), 2000]}
@@ -60,7 +60,7 @@ const Home = () => {
                   variants={scaleIn}
                   initial="hidden"
                   whileInView="visible"
-                  viewport={{ once: true }}
+                  viewport={{ once: false, amount: 0.2 }}
                 />
               </div>
             </Col>
@@ -72,7 +72,7 @@ const Home = () => {
                   variants={fadeInUp}
                   initial="hidden"
                   whileInView="visible"
-                  viewport={{ once: true }}
+                  viewport={{ once: false, amount: 0.2 }}
                 >
                   {t("home.subHeading")}
                 </motion.h1>
@@ -88,14 +88,14 @@ const Home = () => {
         style={{ backgroundImage: `url(${Logo})` }}
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
+        viewport={{ once: false, amount: 0.2 }}
         transition={{ duration: 1 }}
       >
         <motion.div
           variants={fadeInUp}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
+          viewport={{ once: false, amount: 0.2 }}
         >
           <h1 className="landing-text text-white montserrat-600">
             {t("home.firstHeading")}
@@ -114,7 +114,7 @@ const Home = () => {
             variants={fadeInUp}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true }}
+            viewport={{ once: false, amount: 0.2 }}
           >
             <p className="text-white montserrat-600 home-text">
               {t("home.intro")}
@@ -128,7 +128,7 @@ const Home = () => {
             variants={fadeInUp}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true }}
+            viewport={{ once: false, amount: 0.2 }}
           >
             <TypeAnimation
               sequence={[t("home.experience"), 1000]}
@@ -143,7 +143,7 @@ const Home = () => {
               variants={fadeInStaggerContainer}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true }}
+              viewport={{ once: false, amount: 0.2 }}
             >
               <motion.button
                 whileTap={{ scale: 0.95 }}
