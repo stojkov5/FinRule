@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { Row, Col } from "antd";
 import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";

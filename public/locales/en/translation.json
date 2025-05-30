@@ -26,5 +26,29 @@
     "legal": "Legal",
     "privacy": "Privacy Policy",
     "terms": "Terms of Use"
+  },
+  "about": {
+    "title": "ABOUT US",
+    "companyOverview": {
+      "title": "Company Overview",
+      "content": "FinRule is a financial technology company headquartered in the United States, offering AI- powered, cloud-native software solutions that modernize lending operations. Designed specifically for banks with assets ranging from $1 billion to $10 billion, our mission is to help institutions operate with the agility of fintechs while ensuring enterprise-grade reliability and compliance."
+    },
+    "coreValues": {
+      "title": "Core Values",
+      "items": {
+        "innovation": "Continually enhancing features through user feedback and emerging technology.",
+        "integrity": "Prioritizing secure, transparent, and regulatory-compliant operations.",
+        "partnership": "Viewing every client relationship as a long-term collaboration.",
+        "scalability": "Ensuring our solutions grow alongside your institution."
+      }
+    },
+    "ourJourney": {
+      "title": "Our Journey",
+      "content": "Founded by banking transformation veterans, FinRule was created to solve the inefficiencies of legacy LOS systems and to deliver a digital-first solution that simplifies operations while maintaining strict compliance."
+    },
+    "leadershipTeam": {
+      "title": "Leadership Team",
+      "content": "Our executive team includes experts with decades of combined experience in banking technology, credit risk management, regulatory strategy, and enterprise software development."
+    }
   }
 }

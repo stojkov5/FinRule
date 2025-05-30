@@ -1,0 +1,12 @@
+.about-section-box {
+  background: linear-gradient(270deg, #0a324b, #061e2c);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+.page-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}

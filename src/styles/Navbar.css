@@ -1,22 +1,63 @@
-.nav-link {
+.navbar {
+  background: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2.5rem 1rem;
+  z-index: 50;
+}
+
+.navbar-container {
+  max-width: 1280px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   position: relative;
-  font-size: clamp(1rem, 0.571rem + 0.893vw, 1.375rem);
+}
+
+.navbar-logo {
+  position: absolute;
+  left: 0;
+}
+
+.navbar-links {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .navbar-links {
+    display: flex;
+    gap: 2rem;
+    font-weight: 600;
+    font-size: 1.125rem;
+  }
+
+  .navbar-lang {
+    display: flex;
+    position: absolute;
+    right: 0;
+  }
+}
+
+.nav-link {
   color: white;
+  position: relative;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
-  text-decoration: none;
-  padding-bottom: 4px;
   transition: color 0.3s ease;
+  font-size: clamp(1rem, 0.571rem + 0.893vw, 1.375rem);
 }
 
 .nav-link::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: 0px;
-  width: 0%;
+  bottom: -3px;
+  width: 0;
   height: 2px;
-  background-color: #93c5fd; /* Tailwind blue-300 */
-  transition: width 0.5s ease;
+  background-color: #93c5fd;
+  transition: width 0.3s ease;
 }
 
 .nav-link:hover {
@@ -27,15 +68,26 @@
   width: 100%;
 }
 
-.active-link {
+.nav-link.active {
   color: #93c5fd;
 }
 
-.active-link::after {
+.nav-link.active::after {
   width: 100%;
 }
 
+
+
+/* Mobile menu */
 .mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  color: #1f2937;
+  z-index: 40;
   background: linear-gradient(270deg, #0a324b, #061e2c);
   background-size: 400% 400%;
   animation: gradientShift 10s ease infinite;

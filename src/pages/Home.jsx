@@ -30,23 +30,24 @@ const Home = () => {
 
   return (
     <>
-      <Row justify={"center"} className="w-full">
+      <Row justify={"center"} className="w-full intro-section">
         <Col span={20}>
-          <Row className="md:pt-30 pt-10">
-            <Col span={12}>
+          <Row className="md:pt-30 p-0 m-0">
+            <Col span={12} >
               <div className="hidden md:flex w-full h-full items-center justify-center text-white text-center montserrat-600">
                 <motion.div
                   variants={fadeInUp}
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: false, amount: 0.2 }}
+                  
                 >
                   <TypeAnimation
                     sequence={[t("home.firstHeading"), 2000]}
                     wrapper="h1"
                     cursor={true}
                     repeat={Infinity}
-                    className="landing-text text-white montserrat-600"
+                    className="landing-text text-white montserrat-600 "
                   />
                 </motion.div>
               </div>
@@ -107,7 +108,7 @@ const Home = () => {
       </motion.div>
 
       {/* Animated Content Sections */}
-      <Row justify={"center"} className="mt-10">
+      <Row justify={"center"} className="mt-10 py-10">
         <Col span={20}>
           <motion.div
             className="h-full w-full p-5 bg-blue-100/10 rounded backdrop-blur-md"
@@ -122,7 +123,8 @@ const Home = () => {
           </motion.div>
         </Col>
 
-        <Col span={20} className="mt-10">
+        <Col span={20} className="mt-10 ">
+       
           <motion.div
             className="h-full w-full p-5 bg-blue-100/10 rounded backdrop-blur-md"
             variants={fadeInUp}
@@ -130,6 +132,7 @@ const Home = () => {
             whileInView="visible"
             viewport={{ once: false, amount: 0.2 }}
           >
+            
             <TypeAnimation
               sequence={[t("home.experience"), 1000]}
               wrapper="h1"
