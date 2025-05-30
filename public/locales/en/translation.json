@@ -3,7 +3,8 @@
     "home": "HOME",
     "about": "ABOUT",
     "contact": "CONTACT",
-    "product": "PRODUCT"
+    "product": "PRODUCT",
+    "solutions": "SOLUTIONS"
   },
   "home": {
     "firstHeading": " TRANSFORMING Banking Through Precision Automation",
@@ -14,5 +15,16 @@
       "requestDemo": "Request Demo",
       "learn": "Learn More"
     }
+  },
+  "footer": {
+    "quick": "Quick Links",
+    "home": "Home",
+    "about": "About",
+    "contact": "Contact",
+    "product": "Product",
+    "solutions": "Solution",
+    "legal": "Legal",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Use"
   }
 }

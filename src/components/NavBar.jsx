@@ -68,6 +68,9 @@ const Navbar = () => {
               <NavLink to="/product" className="nav-link">
                 {t("nav.product")}
               </NavLink>
+              <NavLink to="/solutions" className="nav-link">
+                {t("nav.solutions")}
+              </NavLink>
             </div>
             <div className="hidden md:flex  items-center space-x-4">
               {/* Language Switcher */}
