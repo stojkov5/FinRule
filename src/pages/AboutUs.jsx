@@ -1,6 +1,53 @@
+/* eslint-disable no-unused-vars */
 import { Row, Col } from "antd";
-import "../styles/About.css"; // Make sure to import your custom CSS
+import "../styles/About.css";
 import { useTranslation } from "react-i18next";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useEffect } from "react";
+
+// Reusable animated section component
+const AnimatedSection = ({ children, direction = "left" }) => {
+  const controls = useAnimation();
+  const [ref, inView] = useInView({
+    threshold: 0.2,
+  });
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    } else {
+      controls.start("hidden");
+    }
+  }, [inView, controls]);
+
+  const variants = {
+    hidden: {
+      opacity: 0,
+      x: direction === "left" ? -100 : 100,
+    },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut",
+      },
+    },
+  };
+
+  return (
+    <motion.div
+      ref={ref}
+      initial="hidden"
+      animate={controls}
+      variants={variants}
+    >
+      {children}
+    </motion.div>
+  );
+};
+
 const AboutUs = () => {
   const { t } = useTranslation();
   const sections = [
@@ -40,46 +87,52 @@ const AboutUs = () => {
   return (
     <Row className="text-white pt-30" justify="center">
       <Col span={20}>
-        <h2 className="montserrat-600 text-center page-title">{t("about.title")}</h2>
+        <h2 className="montserrat-600 text-center page-title">
+          {t("about.title")}
+        </h2>
 
         {sections.map((section, index) => (
-          <Row
+          <AnimatedSection
             key={index}
-            gutter={[32, 32]}
-            justify="space-between"
-            align="middle"
-            className="mb-10"
+            direction={index % 2 === 0 ? "left" : "right"}
           >
-            {index % 2 === 0 ? (
-              <>
-                <Col xs={24} md={16}>
-                  <div className="about-section-box">
-                    <h3 className="text-2xl font-semibold mb-4">
-                      {section.title}
-                    </h3>
-                    <div className="text-base leading-relaxed">
-                      {section.content}
+            <Row
+              gutter={[32, 32]}
+              justify="space-between"
+              align="middle"
+              className="mb-10"
+            >
+              {index % 2 === 0 ? (
+                <>
+                  <Col xs={24} md={16}>
+                    <div className="about-section-box">
+                      <h3 className="text-2xl font-semibold mb-4">
+                        {section.title}
+                      </h3>
+                      <div className="text-base leading-relaxed">
+                        {section.content}
+                      </div>
                     </div>
-                  </div>
-                </Col>
-                <Col xs={0} md={6}></Col> {/* Spacer */}
-              </>
-            ) : (
-              <>
-                <Col xs={0} md={6}></Col> {/* Spacer */}
-                <Col xs={24} md={16}>
-                  <div className="about-section-box">
-                    <h3 className="text-2xl font-semibold mb-4">
-                      {section.title}
-                    </h3>
-                    <div className="text-base leading-relaxed">
-                      {section.content}
+                  </Col>
+                  <Col xs={0} md={6}></Col>
+                </>
+              ) : (
+                <>
+                  <Col xs={0} md={6}></Col>
+                  <Col xs={24} md={16}>
+                    <div className="about-section-box">
+                      <h3 className="text-2xl font-semibold mb-4">
+                        {section.title}
+                      </h3>
+                      <div className="text-base leading-relaxed">
+                        {section.content}
+                      </div>
                     </div>
-                  </div>
-                </Col>
-              </>
-            )}
-          </Row>
+                  </Col>
+                </>
+              )}
+            </Row>
+          </AnimatedSection>
         ))}
       </Col>
     </Row>
