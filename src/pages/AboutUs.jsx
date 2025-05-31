@@ -85,7 +85,7 @@ const AboutUs = () => {
   ];
 
   return (
-    <Row className="text-white pt-30" justify="center">
+    <Row className="text-white pt-30 about-section" justify="center">
       <Col span={20}>
         <h2 className="montserrat-600 text-center page-title">
           {t("about.title")}
