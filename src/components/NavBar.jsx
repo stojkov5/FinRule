@@ -55,7 +55,7 @@ const Navbar = () => {
             </div>
 
             {/* Desktop menu */}
-            <div className="hidden md:flex space-x-6 montserrat-600 ">
+            <div className="hidden lg:flex space-x-6 montserrat-600 ">
               <NavLink to="/" className="nav-link ">
                 {t("nav.home")}
               </NavLink>
@@ -72,13 +72,13 @@ const Navbar = () => {
                 {t("nav.solutions")}
               </NavLink>
             </div>
-            <div className="hidden md:flex  items-center space-x-4">
+            <div className="hidden lg:flex  items-center space-x-4">
               {/* Language Switcher */}
               <LanguageSwitcher />
             </div>
 
             {/* Mobile menu toggle */}
-            <div className="md:hidden flex items-center justify-end w-full">
+            <div className="lg:hidden flex items-center justify-end w-full">
               <button
                 onClick={toggleMenu}
                 className="text-white focus:outline-none"
@@ -124,7 +124,7 @@ const Navbar = () => {
                   animate="open"
                   exit="closed"
                   variants={backdropVariants}
-                  className="fixed top-0 left-0 w-full h-full mobile-menu text-gray-700 md:hidden z-40"
+                  className="fixed top-0 left-0 w-full h-full mobile-menu text-gray-700 lg:hidden z-40"
                 >
                   {/* Close Button */}
                   <div className="flex justify-end p-4  ">

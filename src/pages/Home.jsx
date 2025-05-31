@@ -5,6 +5,7 @@ import { Row, Col } from "antd";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { TypeAnimation } from "react-type-animation";
+
 // Animation Variants
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
@@ -30,24 +31,23 @@ const Home = () => {
 
   return (
     <>
-      <Row justify={"center"} className="w-full intro-section">
+      <Row justify="center" className="w-full intro-section">
         <Col span={20}>
           <Row className="md:pt-30 p-0 m-0">
-            <Col span={12} >
-              <div className="hidden md:flex w-full h-full items-center justify-center text-white text-center montserrat-600">
+            <Col span={12}>
+              <div className="hidden md:flex w-full h-full items-center justify-center text-white text-center">
                 <motion.div
                   variants={fadeInUp}
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: false, amount: 0.2 }}
-                  
                 >
                   <TypeAnimation
                     sequence={[t("home.firstHeading"), 2000]}
                     wrapper="h1"
-                    cursor={true}
+                    cursor
                     repeat={Infinity}
-                    className="landing-text text-white montserrat-600 "
+                    className="heading-text text-white"
                   />
                 </motion.div>
               </div>
@@ -68,15 +68,15 @@ const Home = () => {
 
             <Col span={24}>
               <div className="hidden md:flex items-center justify-center w-full h-full">
-                <motion.h1
-                  className="w-full text-white text-center montserrat-600 home-text"
+                <motion.h2
+                  className="subheading-text text-white text-center"
                   variants={fadeInUp}
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: false, amount: 0.2 }}
                 >
                   {t("home.subHeading")}
-                </motion.h1>
+                </motion.h2>
               </div>
             </Col>
           </Row>
@@ -98,17 +98,13 @@ const Home = () => {
           whileInView="visible"
           viewport={{ once: false, amount: 0.2 }}
         >
-          <h1 className="landing-text text-white montserrat-600">
-            {t("home.firstHeading")}
-          </h1>
-          <p className="landing-text text-white montserrat-600">
-            {t("home.subHeading")}
-          </p>
+          <h1 className="heading-text text-white">{t("home.firstHeading")}</h1>
+          <p className="subheading-text text-white">{t("home.subHeading")}</p>
         </motion.div>
       </motion.div>
 
       {/* Animated Content Sections */}
-      <Row justify={"center"} className="mt-10 py-10">
+      <Row justify="center" className="mt-10 py-10">
         <Col span={20}>
           <motion.div
             className="h-full w-full p-5 bg-blue-100/10 rounded backdrop-blur-md"
@@ -117,14 +113,13 @@ const Home = () => {
             whileInView="visible"
             viewport={{ once: false, amount: 0.2 }}
           >
-            <p className="text-white montserrat-600 home-text">
+            <p className="paragraph-text text-white">
               {t("home.intro")}
             </p>
           </motion.div>
         </Col>
 
-        <Col span={20} className="mt-10 ">
-       
+        <Col span={20} className="mt-10">
           <motion.div
             className="h-full w-full p-5 bg-blue-100/10 rounded backdrop-blur-md"
             variants={fadeInUp}
@@ -132,14 +127,13 @@ const Home = () => {
             whileInView="visible"
             viewport={{ once: false, amount: 0.2 }}
           >
-            
             <TypeAnimation
               sequence={[t("home.experience"), 1000]}
               wrapper="h1"
-              cursor={true}
+              cursor
               repeat={Infinity}
-              className="text-white text-center montserrat-600 home-text"
-            ></TypeAnimation>
+              className="paragraph-text text-white text-center"
+            />
 
             <motion.div
               className="flex justify-center gap-4 mt-5"
@@ -150,14 +144,14 @@ const Home = () => {
             >
               <motion.button
                 whileTap={{ scale: 0.95 }}
-                className="montserrat-600 home-btn rounded-full px-5 py-3"
+                className="home-btn rounded-full px-5 py-3"
                 variants={fadeInUp}
               >
                 {t("home.buttons.requestDemo")}
               </motion.button>
               <motion.button
                 whileTap={{ scale: 0.95 }}
-                className="montserrat-600 home-btn rounded-full px-5 py-3"
+                className="home-btn rounded-full px-5 py-3"
                 variants={fadeInUp}
               >
                 {t("home.buttons.learn")}

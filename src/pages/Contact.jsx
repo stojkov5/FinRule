@@ -1,21 +1,199 @@
-const Contact = () => {
-    return (
-        <div className="contact">
-        <h1>Contact Us</h1>
-        <p>If you have any questions, feel free to reach out!</p>
-        <form>
-            <label htmlFor="name">Name:</label>
-            <input type="text" id="name" name="name" required />
-            
-            <label htmlFor="email">Email:</label>
-            <input type="email" id="email" name="email" required />
-            
-            <label htmlFor="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-            
-            <button type="submit">Send</button>
-        </form>
-        </div>
-    );
-    }
-export default Contact;
+/* eslint-disable no-unused-vars */
+import React from "react";
+import { Row, Col, message } from "antd";
+import { Formik } from "formik";
+import * as Yup from "yup";
+import { motion } from "framer-motion";
+import {
+  User,
+  Mail,
+  Building2,
+  Briefcase,
+  MessageSquare,
+} from "lucide-react";
+import "../styles/Contact.css";
+
+const ContactSchema = Yup.object().shape({
+  fullName: Yup.string().required("Full name is required"),
+  email: Yup.string().email("Invalid email").required("Email is required"),
+  organization: Yup.string().required("Organization is required"),
+  role: Yup.string().required("Role/Title is required"),
+  message: Yup.string().required("Message is required"),
+});
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: (i) => ({
+    opacity: 1,
+    y: 0,
+    transition: { delay: i * 0.2, duration: 0.6, ease: "easeOut" },
+  }),
+};
+
+const ContactUs = () => {
+  const handleSubmit = (values, { resetForm }) => {
+    console.log("Form Submitted:", values);
+    message.success("Your request has been submitted!");
+    resetForm();
+  };
+
+  return (
+    <section className="w-full pt-30 montserrat-100">
+      <Row justify="center">
+        <Col span={20}>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            variants={fadeUp}
+            custom={0}
+            className="p-8 md:p-10 bg-white/5 rounded-xl shadow-2xl backdrop-blur-md"
+          >
+            <motion.h2
+              className="contact-title text-white text-center mb-10"
+              variants={fadeUp}
+              custom={0}
+            >
+              Connect With Us
+            </motion.h2>
+
+            <Row gutter={[32, 32]}>
+              <Col xs={24} md={12} className="order-2 md:order-1">
+                <Formik
+                  initialValues={{
+                    fullName: "",
+                    email: "",
+                    organization: "",
+                    role: "",
+                    message: "",
+                  }}
+                  validationSchema={ContactSchema}
+                  onSubmit={handleSubmit}
+                >
+                  {({
+                    values,
+                    errors,
+                    touched,
+                    handleChange,
+                    handleBlur,
+                    handleSubmit,
+                  }) => (
+                    <motion.form
+                      onSubmit={handleSubmit}
+                      className="space-y-5"
+                      initial="hidden"
+                      whileInView="visible"
+                      viewport={{ once: true, amount: 0.2 }}
+                    >
+                      {[
+                        {
+                          label: "Full Name",
+                          name: "fullName",
+                          type: "text",
+                          icon: User,
+                          
+                        },
+                        {
+                          label: "Email Address",
+                          name: "email",
+                          type: "email",
+                          icon: Mail,
+                          
+                        },
+                        {
+                          label: "Organization",
+                          name: "organization",
+                          type: "text",
+                          icon: Building2,
+                          
+                        },
+                        {
+                          label: "Role/Title",
+                          name: "role",
+                          type: "text",
+                          icon: Briefcase,
+                          
+                        },
+                      ].map((field, i) => (
+                        <motion.div key={field.name} variants={fadeUp} custom={i + 1}>
+                          <label className="contact-label mb-1 block">
+                            {field.label}
+                          </label>
+                          <div className="relative">
+                            <field.icon className="absolute left-3 top-1/2 -translate-y-1/2 text-white/60 w-5 h-5" />
+                            <input
+                              type={field.type}
+                              name={field.name}
+                              placeholder={field.placeholder}
+                              onChange={handleChange}
+                              onBlur={handleBlur}
+                              value={values[field.name]}
+                              className="form-input pl-10 bg-white/10 text-white placeholder-white/60 border-white/20 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                            />
+                          </div>
+                          {touched[field.name] && errors[field.name] && (
+                            <div className="form-error">{errors[field.name]}</div>
+                          )}
+                        </motion.div>
+                      ))}
+
+                      <motion.div variants={fadeUp} custom={5}>
+                        <label className="contact-label mb-1 block">Message</label>
+                        <div className="relative">
+                          <MessageSquare className="absolute left-3 top-3 text-white/60 w-5 h-5" />
+                          <textarea
+                            name="message"
+                            rows="4"
+                           
+                            onChange={handleChange}
+                            onBlur={handleBlur}
+                            value={values.message}
+                            className="form-input pl-10 bg-white/10 text-white placeholder-white/60 border-white/20 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                          />
+                        </div>
+                        {touched.message && errors.message && (
+                          <div className="form-error">{errors.message}</div>
+                        )}
+                      </motion.div>
+
+                      <motion.div variants={fadeUp} custom={6}>
+                        <button type="submit" className="form-button w-full rounded-full px-6 py-3">
+                          Submit Request
+                        </button>
+                      </motion.div>
+                    </motion.form>
+                  )}
+                </Formik>
+              </Col>
+
+              <Col xs={24} md={12} className="order-1 md:order-2">
+                <motion.div variants={fadeUp} custom={7}>
+                  <p className="contact-paragraph text-white/80 mb-6 leading-relaxed">
+                    We’re here to help you streamline your lending and strengthen
+                    your bank’s competitive advantage. Reach out for a consultation,
+                    partnership inquiry, or product demo.
+                  </p>
+                  <div className="text-white/80 contact-paragraph space-y-2">
+                    <p><strong>Contact Details:</strong></p>
+                    <p>Email: <a href="mailto:info@startfinno.com" className="underline">info@startfinno.com</a></p>
+                    <p>Phone: <a href="tel:7082401738" className="underline">708-240-1738</a></p>
+                  </div>
+                </motion.div>
+              </Col>
+            </Row>
+
+            <motion.p
+              className="contact-footer text-center text-white/80 mt-12"
+              variants={fadeUp}
+              custom={8}
+            >
+              Let’s modernize your lending—together.
+            </motion.p>
+          </motion.div>
+        </Col>
+      </Row>
+    </section>
+  );
+};
+
+export default ContactUs;

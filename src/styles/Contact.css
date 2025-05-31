@@ -1,0 +1,54 @@
+.contact-title {
+  font-size: clamp(1.75rem, 4vw, 2.5rem); /* 28px to 40px */
+}
+
+.contact-paragraph {
+  font-size: clamp(1rem, 2.5vw, 1.125rem); /* 16px to 18px */
+}
+
+.contact-label {
+
+  font-size: clamp(0.95rem, 2vw, 1rem); /* 15.2px to 16px */
+  color: white;
+}
+
+.contact-footer {
+  font-size: clamp(1rem, 2.5vw, 1.125rem); /* 16px to 18px */
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.5rem;
+  padding-left: 3rem; /* This is pl-12 (48px) */
+  border-radius: 6px;
+  border: 1px solid #d9d9d9;
+  margin-top: 0.25rem;
+  transition: border-color, background 1s ease;
+  font-size: clamp(0.95rem, 2vw, 1rem);
+}
+
+
+.form-input:focus {
+  border-color: #4096ff;
+  outline: none;
+  background: #0a324b;
+}
+
+.form-error {
+  color: #ff4d4f;
+  font-size: clamp(0.8rem, 1.5vw, 0.875rem); /* 12.8px to 14px */
+  margin-top: 0.25rem;
+}
+
+.form-button {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  transition: background-color 1s ease-in-out, color 0.5s ease-in-out;
+  font-size: clamp(1rem, 2.5vw, 1.125rem); /* 16px to 18px */
+}
+
+.form-button:hover {
+  background-color: #0a324b;
+  color: #93c5fd;
+}
