@@ -50,5 +50,34 @@
       "title": "Leadership Team",
       "content": "Our executive team includes experts with decades of combined experience in banking technology, credit risk management, regulatory strategy, and enterprise software development."
     }
+  },
+ 
+  
+  "form": {
+    "title": "Connect With Us",
+    "submitButton": "Submit Request",
+    "successMessage": "Your request has been submitted!",
+    "labels": {
+      "fullName": "Full Name",
+      "email": "Email Address",
+      "organization": "Organization",
+      "role": "Role/Title",
+      "message": "Message"
+    },
+    "errors": {
+      "fullName": "Full name is required",
+      "email": "Email is required",
+      "invalidEmail": "Invalid email",
+      "organization": "Organization is required",
+      "role": "Role/Title is required",
+      "message": "Message is required"
+    },
+    "description": "We’re here to help you streamline your lending and strengthen your bank’s competitive advantage. Reach out for a consultation, partnership inquiry, or product demo.",
+    "contactDetailsTitle": "Contact Details:",
+    "emailLabel": "Email",
+    "phoneLabel": "Phone",
+    "contactFooter": "Let’s modernize your lending—together."
   }
 }
+
+
