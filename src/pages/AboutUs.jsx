@@ -6,43 +6,25 @@ import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 
-// Reusable animated section component
 const AnimatedSection = ({ children, direction = "left" }) => {
   const controls = useAnimation();
-  const [ref, inView] = useInView({
-    threshold: 0.2,
-  });
+  const [ref, inView] = useInView({ threshold: 0.2 });
 
   useEffect(() => {
-    if (inView) {
-      controls.start("visible");
-    } else {
-      controls.start("hidden");
-    }
+    controls.start(inView ? "visible" : "hidden");
   }, [inView, controls]);
 
   const variants = {
-    hidden: {
-      opacity: 0,
-      x: direction === "left" ? -100 : 100,
-    },
+    hidden: { opacity: 0, x: direction === "left" ? -100 : 100 },
     visible: {
       opacity: 1,
       x: 0,
-      transition: {
-        duration: 0.6,
-        ease: "easeOut",
-      },
+      transition: { duration: 0.6, ease: "easeOut" },
     },
   };
 
   return (
-    <motion.div
-      ref={ref}
-      initial="hidden"
-      animate={controls}
-      variants={variants}
-    >
+    <motion.div ref={ref} initial="hidden" animate={controls} variants={variants}>
       {children}
     </motion.div>
   );
@@ -58,19 +40,11 @@ const AboutUs = () => {
     {
       title: t("about.coreValues.title"),
       content: (
-        <ul className="list-disc list-inside space-y-2">
-          <li>
-            <strong>{t("about.coreValues.items.innovation")}</strong>
-          </li>
-          <li>
-            <strong>{t("about.coreValues.items.integrity")}</strong>
-          </li>
-          <li>
-            <strong>{t("about.coreValues.items.partnership")}</strong>
-          </li>
-          <li>
-            <strong>{t("about.coreValues.items.scalability")}</strong>
-          </li>
+        <ul className="about-list">
+          <li><strong>{t("about.coreValues.items.innovation")}</strong></li>
+          <li><strong>{t("about.coreValues.items.integrity")}</strong></li>
+          <li><strong>{t("about.coreValues.items.partnership")}</strong></li>
+          <li><strong>{t("about.coreValues.items.scalability")}</strong></li>
         </ul>
       ),
     },
@@ -85,9 +59,9 @@ const AboutUs = () => {
   ];
 
   return (
-    <Row className="text-white pt-30 about-section" justify="center">
+    <Row className="about-section" justify="center">
       <Col span={20}>
-        <h2 className="montserrat-600 text-center page-title">
+        <h2 className="page-title montserrat-600 text-center">
           {t("about.title")}
         </h2>
 
@@ -100,33 +74,25 @@ const AboutUs = () => {
               gutter={[32, 32]}
               justify="space-between"
               align="middle"
-              className="mb-10"
+              className="about-row"
             >
               {index % 2 === 0 ? (
                 <>
                   <Col xs={24} md={16}>
                     <div className="about-section-box">
-                      <h3 className="text-2xl font-semibold mb-4">
-                        {section.title}
-                      </h3>
-                      <div className="text-base leading-relaxed">
-                        {section.content}
-                      </div>
+                      <h3 className="about-heading">{section.title}</h3>
+                      <div className="about-content">{section.content}</div>
                     </div>
                   </Col>
-                  <Col xs={0} md={6}></Col>
+                  <Col xs={0} md={6} />
                 </>
               ) : (
                 <>
-                  <Col xs={0} md={6}></Col>
+                  <Col xs={0} md={6} />
                   <Col xs={24} md={16}>
                     <div className="about-section-box">
-                      <h3 className="text-2xl font-semibold mb-4">
-                        {section.title}
-                      </h3>
-                      <div className="text-base leading-relaxed">
-                        {section.content}
-                      </div>
+                      <h3 className="about-heading">{section.title}</h3>
+                      <div className="about-content">{section.content}</div>
                     </div>
                   </Col>
                 </>

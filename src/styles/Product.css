@@ -1,0 +1,74 @@
+/* Keep existing styles */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
+
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 0 clamp(1rem, 2vw, 2rem);
+}
+
+.product-section {
+  padding-top: clamp(5rem, 10vw, 7.5rem);
+  color: white;
+}
+
+.product-heading {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: clamp(1.5rem, 3vw, 2.5rem);
+  text-align: center;
+}
+
+.product-subheading {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 600;
+  color: #d1d5db;
+  margin-bottom: clamp(1rem, 2.5vw, 2rem);
+}
+
+.product-paragraph {
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  font-weight: 400;
+  line-height: 1.6;
+  color: #e5e7eb;
+  margin-bottom: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.feature-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  padding: clamp(1rem, 3vw, 1.5rem);
+  border-radius: clamp(0.75rem, 2vw, 1rem);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  will-change: transform;
+}
+
+.feature-title {
+  font-size: clamp(1.125rem, 2vw, 1.5rem);
+  font-weight: 600;
+  color: #60a5fa;
+  margin-bottom: clamp(0.5rem, 1.5vw, 1rem);
+}
+
+.feature-list {
+  list-style-type: disc;
+  padding-left: clamp(1rem, 2vw, 1.5rem);
+  color: #d1d5db;
+  font-size: clamp(0.9rem, 1.2vw, 1rem);
+  line-height: 1.6;
+}
+
+.intro,
+.features,
+.conclusion {
+  margin-bottom: clamp(2rem, 4vw, 3rem);
+}

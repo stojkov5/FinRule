@@ -50,12 +50,12 @@ const Navbar = () => {
         <Col span={20} className="w-full">
           <div className=" relative max-w-7xl m-auto flex items-center justify-between ">
             {/* Logo */}
-            <div className=" text-xl font-bold text-gray-800">
+            <NavLink className=" text-xl font-bold text-gray-800">
               <img src="./FinRule.png" alt="FinRule" className="h-30 object-contain" />
-            </div>
+            </NavLink>
 
             {/* Desktop menu */}
-            <div className="hidden lg:flex space-x-6 montserrat-600 ">
+            <div className="hidden lg:flex space-x-6 montserrat-100 ">
               <NavLink to="/" className="nav-link ">
                 {t("nav.home")}
               </NavLink>

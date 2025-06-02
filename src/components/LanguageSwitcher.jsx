@@ -11,7 +11,7 @@ const LanguageSwitcher = () => {
   const currentLang = i18n.language;
 
   return (
-    <div className="language-switcher montserrat-600 lang-btn">
+    <div className="language-switcher lang-btn">
       <button
         onClick={() => changeLanguage("en")}
         className={`lang-btn ${currentLang === "en" ? "active-lang" : ""}`}

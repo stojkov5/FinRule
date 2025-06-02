@@ -39,17 +39,17 @@ const ContactUs = () => {
   return (
     <section className="w-full pt-30 montserrat-100">
       <Row justify="center">
-        <Col span={20}>
+        <Col xs={24} sm={22} md={20}>
           <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.2 }}
             variants={fadeUp}
             custom={0}
-            className="p-8 md:p-10 bg-white/5 rounded-xl shadow-2xl backdrop-blur-md"
+            className="p-6 sm:p-8 md:p-10 bg-white/5 rounded-xl shadow-2xl backdrop-blur-md"
           >
             <motion.h2
-              className="contact-title text-white text-center mb-10"
+              className="contact-title text-center"
               variants={fadeUp}
               custom={0}
             >
@@ -119,14 +119,14 @@ const ContactUs = () => {
                             {field.label}
                           </label>
                           <div className="relative">
-                            <field.icon className="absolute left-3 top-1/2 -translate-y-1/2 text-white/60 w-5 h-5" />
+                            <field.icon className="input-icon" />
                             <input
                               type={field.type}
                               name={field.name}
                               onChange={handleChange}
                               onBlur={handleBlur}
                               value={values[field.name]}
-                              className="form-input pl-10 bg-white/10 text-white placeholder-white/60 border-white/20 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                              className="form-input"
                             />
                           </div>
                           {touched[field.name] && errors[field.name] && (
@@ -142,14 +142,14 @@ const ContactUs = () => {
                           {t("form.labels.message")}
                         </label>
                         <div className="relative">
-                          <MessageSquare className="absolute left-3 top-3 text-white/60 w-5 h-5" />
+                          <MessageSquare className="input-icon top-3" />
                           <textarea
                             name="message"
                             rows="4"
                             onChange={handleChange}
                             onBlur={handleBlur}
                             value={values.message}
-                            className="form-input pl-10 bg-white/10 text-white placeholder-white/60 border-white/20 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                            className="form-input"
                           />
                         </div>
                         {touched.message && errors.message && (
@@ -158,10 +158,7 @@ const ContactUs = () => {
                       </motion.div>
 
                       <motion.div variants={fadeUp} custom={6}>
-                        <button
-                          type="submit"
-                          className="form-button w-full rounded-full px-6 py-3"
-                        >
+                        <button type="submit" className="form-button">
                           {t("form.submitButton")}
                         </button>
                       </motion.div>
@@ -172,10 +169,10 @@ const ContactUs = () => {
 
               <Col xs={24} md={12} className="order-1 md:order-2">
                 <motion.div variants={fadeUp} custom={7}>
-                  <p className="contact-paragraph text-white/80 mb-6 leading-relaxed">
+                  <p className="contact-paragraph mb-6">
                     {t("form.description")}
                   </p>
-                  <div className="text-white/80 contact-paragraph space-y-2">
+                  <div className="contact-paragraph space-y-2">
                     <p>
                       <strong>{t("form.contactDetailsTitle")}</strong>
                     </p>
@@ -196,11 +193,7 @@ const ContactUs = () => {
               </Col>
             </Row>
 
-            <motion.p
-              className="contact-footer text-center text-white/80 mt-12"
-              variants={fadeUp}
-              custom={8}
-            >
+            <motion.p className="contact-footer mt-12" variants={fadeUp} custom={8}>
               {t("form.contactFooter")}
             </motion.p>
           </motion.div>
