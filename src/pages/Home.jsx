@@ -82,23 +82,31 @@ const Home = () => {
 
       {/* Mobile Background Section */}
       <motion.div
-        className="md:hidden  relative w-full h-screen bg-cover bg-center flex items-center justify-center text-center px-6"
-        style={{ backgroundImage: `url(${Logo})` }}
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: false, amount: 0.2 }}
-        transition={{ duration: 1 }}
-      >
-        <motion.div
-          variants={fadeInUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: false, amount: 0.2 }}
-        >
-          <h1 className="heading-text text-white">{t("home.firstHeading")}</h1>
-          <p className="subheading-text text-white mt-4">{t("home.subHeading")}</p>
-        </motion.div>
-      </motion.div>
+  className="md:hidden relative w-full h-screen bg-cover bg-center flex items-center justify-center text-center px-6 mobile-hero"
+  initial={{ opacity: 0 }}
+  whileInView={{ opacity: 1 }}
+  viewport={{ once: false, amount: 0.2 }}
+  transition={{ duration: 1 }}
+>
+  {/* Watermark logo */}
+  <img
+    src={Logo}
+    alt="FinRule Logo"
+    className="absolute inset-0 m-auto  max-w-[80%] h-auto z-0 pointer-events-none"
+  />
+
+  {/* Text content */}
+  <motion.div
+    variants={fadeInUp}
+    initial="hidden"
+    whileInView="visible"
+    viewport={{ once: false, amount: 0.2 }}
+    className="z-10"
+  >
+    <h1 className="heading-text text-white">{t("home.firstHeading")}</h1>
+    <p className="subheading-text text-white mt-4">{t("home.subHeading")}</p>
+  </motion.div>
+</motion.div>
 
       {/* Animated Content Section */}
       <Row justify="center" className="py-20 px-4 md:px-0 bg-[#061e2c]">

@@ -144,7 +144,7 @@ const Navbar = () => {
                           <NavLink
                             to={path}
                             onClick={toggleMenu}
-                            className="nav-link montserrat-600"
+                            className="nav-link montserrat-100"
                           >
                             {t(`nav.${path === "/" ? "home" : path.slice(1)}`)}
                           </NavLink>

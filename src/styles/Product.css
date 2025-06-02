@@ -5,11 +5,6 @@
   font-family: "Montserrat", sans-serif;
 }
 
-.container {
-  max-width: 72rem;
-  margin: 0 auto;
-  padding: 0 clamp(1rem, 2vw, 2rem);
-}
 
 .product-section {
   padding-top: clamp(5rem, 10vw, 7.5rem);

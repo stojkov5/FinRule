@@ -1,3 +1,24 @@
+.contact {
+  position: relative;
+  background-image: url("/Images/Connect.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.contact::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.299);
+  backdrop-filter: blur(6px);
+  z-index: 0;
+}
+
 .contact-title {
   font-size: clamp(1.25rem, 2vw, 2rem); /* 20px to 32px */
   font-weight: bold;

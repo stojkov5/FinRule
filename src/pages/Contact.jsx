@@ -37,9 +37,9 @@ const ContactUs = () => {
   };
 
   return (
-    <section className="w-full pt-30 montserrat-100">
+    <section className="w-full py-30 montserrat-100 contact">
       <Row justify="center">
-        <Col xs={24} sm={22} md={20}>
+        <Col xs={20} sm={20} md={20}>
           <motion.div
             initial="hidden"
             whileInView="visible"

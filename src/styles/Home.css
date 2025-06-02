@@ -35,7 +35,7 @@
 
 .intro-section {
   position: relative;
-  background-image: url("/Images/Banking.jpg");
+  background-image: url("/Images/BG1.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -58,6 +58,24 @@
   position: relative;
   z-index: 2;
 }
+.mobile-hero {
+  background-image: url("/Images/BG1.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.mobile-hero::before {
+    content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(6px);
+  z-index: 1;
+}
+
 
 @media (max-width: 768px) {
   .intro-section {

@@ -51,8 +51,7 @@
       "content": "Our executive team includes experts with decades of combined experience in banking technology, credit risk management, regulatory strategy, and enterprise software development."
     }
   },
- 
-  
+
   "form": {
     "title": "CONNECT WITH US",
     "submitButton": "Submit Request",
@@ -77,7 +76,59 @@
     "emailLabel": "Email",
     "phoneLabel": "Phone",
     "contactFooter": "Let’s modernize your lending—together."
+  },
+
+  "product": {
+    "heading": "PRODUCT",
+    "subheading": "Platform Overview",
+    "description": "FinRule’s Loan Origination System is engineered for digital lending at scale. The platform provides robust automation across every step of the loan lifecycle—allowing lenders to reduce manual work, increase underwriting precision, and meet growing customer expectations for seamless, online services.",
+    "features": {
+      "workflow": {
+        "title": "Custom Workflow Management",
+        "points": [
+          "Configure workflows for retail, commercial, or SME loans.",
+          "Enable branch-specific or centralized decision-making processes."
+        ]
+      },
+      "document": {
+        "title": "Secure Document Management",
+        "points": [
+          "Real-time access to customer-submitted documents.",
+          "Built-in e-signature and approval flows."
+        ]
+      },
+      "ai": {
+        "title": "AI-Enhanced Underwriting",
+        "points": [
+          "Analyze risk using automated financial spreading and integrated third-party data sources.",
+          "Generate credit scores, risk ratings, and term sheets instantly."
+        ]
+      },
+      "etrr": {
+        "title": "ETRR (Electronic Tax Return Reader)",
+        "points": [
+          "Instantly parse and capture borrower data from uploaded tax returns.",
+          "Eliminate data entry and reduce errors in income verification."
+        ]
+      },
+      "compliance": {
+        "title": "Digital Compliance Engine",
+        "points": [
+          "Track all activities in real-time audit logs.",
+          "Get automatic alerts for any deviation from FDIC or CFPB guidelines."
+        ]
+      },
+      "integrations": {
+        "title": "Real-Time Integrations",
+        "points": [
+          "API access to core systems (e.g., FIS, Encompass).",
+          "CRM and compliance partner integrations."
+        ]
+      }
+    },
+    "conclusion": {
+      "subheading": "User Experience",
+      "paragraph": "Designed for ease of use with a modern UI, intuitive dashboards, and customizable role-based views."
+    }
   }
 }
-
-
