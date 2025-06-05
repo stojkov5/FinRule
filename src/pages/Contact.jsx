@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 import { User, Mail, Building2, Briefcase, MessageSquare } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import "../styles/Contact.css";
-
+import emailjs from "emailjs-com";
 const ContactUs = () => {
   const { t } = useTranslation();
 
@@ -30,11 +30,34 @@ const ContactUs = () => {
     }),
   };
 
-  const handleSubmit = (values, { resetForm }) => {
-    console.log("Form Submitted:", values);
-    message.success(t("form.successMessage"));
-    resetForm();
+ const handleSubmit = (values, { resetForm }) => {
+  const templateParams = {
+    full_name: values.fullName,
+    email: values.email,
+    organization: values.organization,
+    role: values.role,
+    message: values.message,
   };
+
+  emailjs
+    .send(
+      "your_service_id", // e.g., "service_xxx"
+      "your_template_id", // e.g., "template_demo"
+      templateParams,
+      "your_public_key"   // e.g., "user_xxx"
+    )
+    .then(
+      (response) => {
+        console.log("SUCCESS!", response.status, response.text);
+        message.success(t("form.successMessage"));
+        resetForm();
+      },
+      (error) => {
+        console.log("FAILED...", error);
+        message.error(t("form.errorMessage") || "Something went wrong.");
+      }
+    );
+};
 
   return (
     <section className="w-full py-30 montserrat-100 contact">
