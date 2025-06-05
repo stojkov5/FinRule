@@ -201,5 +201,9 @@
       "webinars": "Industry Webinars and Expert Panels",
       "blog": "Blog: Trends in Lending, AI in Banking, and More"
     }
+  },
+  "contactForm": {
+    "requestSent": "Request Sent!",
+    "requestSentDescription": "We’ll be in touch shortly."
   }
 }
