@@ -44,7 +44,7 @@ const ContactUs = () => {
         "service_n9n90vs", // e.g., "service_xxx"
         "template_cerxlr4", // e.g., "template_demo"
         templateParams,
-        "your_public_key" // e.g., "user_xxx"
+        "ij19tw5SyjNfq-Sjn" // e.g., "user_xxx"
       )
       .then(
         (response) => {
