@@ -130,5 +130,76 @@
       "subheading": "User Experience",
       "paragraph": "Designed for ease of use with a modern UI, intuitive dashboards, and customizable role-based views."
     }
+  },
+  "solutions": {
+    "title": "SOLUTIONS",
+    "industryChallenges": {
+      "title": "Industry Challenges:",
+      "description": "Banks face increasing pressure to digitize while managing regulatory complexity and aging infrastructure. FinRule offers targeted solutions to overcome these issues, including:",
+      "point1": "Manual loan origination processes that slow down operations.",
+      "point2": "Fragmented systems leading to compliance gaps.",
+      "point3": "Redundant data entries reducing efficiency."
+    },
+    "howWeHelp": {
+      "title": "How FinRule Helps:",
+      "point1": "Provides a single platform for customer intake, document collection, credit decisioning, and loan closing.",
+      "point2": "Automates compliance with intelligent audit trails and reporting.",
+      "point3": "Reduces loan cycle time from weeks to days."
+    },
+    "whoWeServe": {
+      "title": "Who We Serve:",
+      "point1": "Midsize banks and financial institutions",
+      "point2": "Regional credit unions",
+      "point3": "Lending subsidiaries and fintech partnerships"
+    },
+    "useCases": {
+      "title": "Real-World Use Cases:",
+      "point1": "Commercial real estate loan processing",
+      "point2": "Small business loan origination with SBA forms",
+      "point3": "Retail loan application portals with auto-decisioning"
+    }
+  },
+  "benefits": {
+    "title": "TOP BENEFITS",
+    "impactTitle": "OPERATIONAL IMPACT",
+    "efficiency": {
+      "title": "Efficiency",
+      "description": "Digitize every step of the loan journey to remove bottlenecks and eliminate redundancy."
+    },
+    "accuracy": {
+      "title": "Accuracy",
+      "description": "AI-powered spreading and validation tools improve consistency in financial assessments."
+    },
+    "speed": {
+      "title": "Speed",
+      "description": "Close loans faster with real-time notifications, automatic routing, and pre-configured decision logic."
+    },
+    "compliance": {
+      "title": "Compliance",
+      "description": "Integrated policy engine ensures that all processes stay aligned with up-to-date regulatory requirements."
+    },
+    "customer": {
+      "title": "Customer Experience",
+      "description": "Provide customers with an end-to-end digital experience—from application to closing—with 24/7 access and live status tracking."
+    },
+    "impact": {
+      "reductionTime": "Reduction in processing time",
+      "decreaseErrors": "Decrease in manual errors",
+      "complianceReady": "Compliance audit readiness at any time"
+    }
+  },
+  "resources": {
+    "title": "RESOURCES",
+    "subtitle": "Knowledge Hub (Coming Soon):",
+    "description": "Stay informed and ahead of the curve with resources curated for lending professionals and banking executives.",
+    "upcoming": "Upcoming Resources:",
+    "imageAlt": "Resources",
+    "items": {
+      "videos": "Product Walkthrough Videos",
+      "caseStudies": "Case Studies and Success Stories",
+      "guides": "Compliance Whitepapers and Guides",
+      "webinars": "Industry Webinars and Expert Panels",
+      "blog": "Blog: Trends in Lending, AI in Banking, and More"
+    }
   }
 }

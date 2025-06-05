@@ -176,24 +176,18 @@ const ContactUs = () => {
                     <p>
                       <strong>{t("form.contactDetailsTitle")}</strong>
                     </p>
-                    <p>
-                      {t("form.emailLabel")}:{" "}
-                      <a href="#" className="underline">
-                        info@startfinno.com
-                      </a>
-                    </p>
-                    <p>
-                      {t("form.phoneLabel")}:{" "}
-                      <a href="#" className="underline">
-                        708-240-1738
-                      </a>
-                    </p>
+                    <p>{t("form.emailLabel")}: info@startfinno.com</p>
+                    <p>{t("form.phoneLabel")}: 708-240-1738</p>
                   </div>
                 </motion.div>
               </Col>
             </Row>
 
-            <motion.p className="contact-footer mt-12" variants={fadeUp} custom={8}>
+            <motion.p
+              className="contact-footer mt-12"
+              variants={fadeUp}
+              custom={8}
+            >
               {t("form.contactFooter")}
             </motion.p>
           </motion.div>

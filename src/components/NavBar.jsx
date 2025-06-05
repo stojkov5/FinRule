@@ -138,7 +138,7 @@ const Navbar = () => {
 
                   {/* Navigation Links */}
                   <div className="flex flex-col items-center justify-center h-full space-y-6 text-xl">
-                    {["/", "/about", "/contact", "/product"].map(
+                    {["/", "/about", "/contact", "/product", "/solutions"].map(
                       (path, idx) => (
                         <motion.div key={idx} variants={itemVariants}>
                           <NavLink

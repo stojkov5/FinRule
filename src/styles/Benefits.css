@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
+
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+.benefits-section {
+  color: white;
+  overflow-x: hidden;
+}
+
+.benefits-title {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: clamp(1.5rem, 3vw, 2.5rem);
+  text-align: center;
+}
+
+.benefits-row {
+  margin-bottom: clamp(2rem, 4vw, 3rem);
+}
+
+.benefit-card {
+  position: relative;
+  border-radius: clamp(0.75rem, 2vw, 1rem);
+  overflow: hidden;
+  padding: clamp(1rem, 3vw, 1.5rem);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  color: white;
+  z-index: 1;
+}
+
+.benefit-heading {
+  font-size: clamp(1.25rem, 2vw, 2rem);
+  font-weight: 600;
+  margin-bottom: clamp(1rem, 2vw, 1.5rem);
+  color: white;
+}
+
+.benefit-text {
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  line-height: 1.6;
+  color: #e5e7eb;
+}
+
+.benefit-icon {
+  color: #22c55e; /* Tailwind green-500 */
+  margin-right: 0.5em;
+  flex-shrink: 0;
+  width: 1.2em;
+  height: 1.2em;
+  margin-top: 0.25em;
+}
