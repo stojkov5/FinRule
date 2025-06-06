@@ -1,0 +1,209 @@
+{
+  "nav": {
+    "home": "HOME",
+    "about": "ABOUT",
+    "contact": "CONTACT",
+    "product": "PRODUCT",
+    "solutions": "SOLUTIONS"
+  },
+  "home": {
+    "firstHeading": " TRANSFORMING Banking Through Precision Automation",
+    "subHeading": " Revolutionize the way your financial institution operates. Experience faster decision-making, streamlined operations, and enhanced customer engagement with FinRule.",
+    "intro": " FinRule is the next-generation Loan Origination System (LOS) built for midsize banks and credit unions. Our intelligent automation platform enables financial institutions to digitize and optimize every step of the lending journey—from online applications and credit analysis to digital document management and compliance tracking.",
+    "experience": "Experience intelligent lending. Request a demo today or explore how FinRule can fit into your banking infrastructure.",
+    "buttons": {
+      "requestDemo": "Request Demo",
+      "learn": "Learn More"
+    }
+  },
+  "footer": {
+    "quick": "Quick Links",
+    "home": "Home",
+    "about": "About",
+    "contact": "Contact",
+    "product": "Product",
+    "solutions": "Solution",
+    "legal": "Legal",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Use"
+  },
+  "about": {
+    "title": "ABOUT US",
+    "companyOverview": {
+      "title": "Company Overview",
+      "content": "FinRule is a financial technology company headquartered in the United States, offering AI- powered, cloud-native software solutions that modernize lending operations. Designed specifically for banks with assets ranging from $1 billion to $10 billion, our mission is to help institutions operate with the agility of fintechs while ensuring enterprise-grade reliability and compliance."
+    },
+    "coreValues": {
+      "title": "Core Values",
+      "items": {
+        "innovation": "Continually enhancing features through user feedback and emerging technology.",
+        "integrity": "Prioritizing secure, transparent, and regulatory-compliant operations.",
+        "partnership": "Viewing every client relationship as a long-term collaboration.",
+        "scalability": "Ensuring our solutions grow alongside your institution."
+      }
+    },
+    "ourJourney": {
+      "title": "Our Journey",
+      "content": "Founded by banking transformation veterans, FinRule was created to solve the inefficiencies of legacy LOS systems and to deliver a digital-first solution that simplifies operations while maintaining strict compliance."
+    },
+    "leadershipTeam": {
+      "title": "Leadership Team",
+      "content": "Our executive team includes experts with decades of combined experience in banking technology, credit risk management, regulatory strategy, and enterprise software development."
+    }
+  },
+
+  "form": {
+    "title": "CONNECT WITH US",
+    "submitButton": "Submit Request",
+    "successMessage": "Your request has been submitted!",
+    "labels": {
+      "fullName": "Full Name",
+      "email": "Email Address",
+      "organization": "Organization",
+      "role": "Role/Title",
+      "message": "Message"
+    },
+    "errors": {
+      "fullName": "Full name is required",
+      "email": "Email is required",
+      "invalidEmail": "Invalid email",
+      "organization": "Organization is required",
+      "role": "Role/Title is required",
+      "message": "Message is required"
+    },
+    "description": "We’re here to help you streamline your lending and strengthen your bank’s competitive advantage. Reach out for a consultation, partnership inquiry, or product demo.",
+    "contactDetailsTitle": "Contact Details:",
+    "emailLabel": "Email",
+    "phoneLabel": "Phone",
+    "contactFooter": "Let’s modernize your lending—together."
+  },
+
+  "product": {
+    "heading": "PRODUCT",
+    "subheading": "Platform Overview",
+    "description": "FinRule’s Loan Origination System is engineered for digital lending at scale. The platform provides robust automation across every step of the loan lifecycle—allowing lenders to reduce manual work, increase underwriting precision, and meet growing customer expectations for seamless, online services.",
+    "features": {
+      "workflow": {
+        "title": "Custom Workflow Management",
+        "points": [
+          "Configure workflows for retail, commercial, or SME loans.",
+          "Enable branch-specific or centralized decision-making processes."
+        ]
+      },
+      "document": {
+        "title": "Secure Document Management",
+        "points": [
+          "Real-time access to customer-submitted documents.",
+          "Built-in e-signature and approval flows."
+        ]
+      },
+      "ai": {
+        "title": "AI-Enhanced Underwriting",
+        "points": [
+          "Analyze risk using automated financial spreading and integrated third-party data sources.",
+          "Generate credit scores, risk ratings, and term sheets instantly."
+        ]
+      },
+      "etrr": {
+        "title": "ETRR (Electronic Tax Return Reader)",
+        "points": [
+          "Instantly parse and capture borrower data from uploaded tax returns.",
+          "Eliminate data entry and reduce errors in income verification."
+        ]
+      },
+      "compliance": {
+        "title": "Digital Compliance Engine",
+        "points": [
+          "Track all activities in real-time audit logs.",
+          "Get automatic alerts for any deviation from FDIC or CFPB guidelines."
+        ]
+      },
+      "integrations": {
+        "title": "Real-Time Integrations",
+        "points": [
+          "API access to core systems (e.g., FIS, Encompass).",
+          "CRM and compliance partner integrations."
+        ]
+      }
+    },
+    "conclusion": {
+      "subheading": "User Experience",
+      "paragraph": "Designed for ease of use with a modern UI, intuitive dashboards, and customizable role-based views."
+    }
+  },
+  "solutions": {
+    "title": "SOLUTIONS",
+    "industryChallenges": {
+      "title": "Industry Challenges:",
+      "description": "Banks face increasing pressure to digitize while managing regulatory complexity and aging infrastructure. FinRule offers targeted solutions to overcome these issues, including:",
+      "point1": "Manual loan origination processes that slow down operations.",
+      "point2": "Fragmented systems leading to compliance gaps.",
+      "point3": "Redundant data entries reducing efficiency."
+    },
+    "howWeHelp": {
+      "title": "How FinRule Helps:",
+      "point1": "Provides a single platform for customer intake, document collection, credit decisioning, and loan closing.",
+      "point2": "Automates compliance with intelligent audit trails and reporting.",
+      "point3": "Reduces loan cycle time from weeks to days."
+    },
+    "whoWeServe": {
+      "title": "Who We Serve:",
+      "point1": "Midsize banks and financial institutions",
+      "point2": "Regional credit unions",
+      "point3": "Lending subsidiaries and fintech partnerships"
+    },
+    "useCases": {
+      "title": "Real-World Use Cases:",
+      "point1": "Commercial real estate loan processing",
+      "point2": "Small business loan origination with SBA forms",
+      "point3": "Retail loan application portals with auto-decisioning"
+    }
+  },
+  "benefits": {
+    "title": "TOP BENEFITS",
+    "impactTitle": "OPERATIONAL IMPACT",
+    "efficiency": {
+      "title": "Efficiency",
+      "description": "Digitize every step of the loan journey to remove bottlenecks and eliminate redundancy."
+    },
+    "accuracy": {
+      "title": "Accuracy",
+      "description": "AI-powered spreading and validation tools improve consistency in financial assessments."
+    },
+    "speed": {
+      "title": "Speed",
+      "description": "Close loans faster with real-time notifications, automatic routing, and pre-configured decision logic."
+    },
+    "compliance": {
+      "title": "Compliance",
+      "description": "Integrated policy engine ensures that all processes stay aligned with up-to-date regulatory requirements."
+    },
+    "customer": {
+      "title": "Customer Experience",
+      "description": "Provide customers with an end-to-end digital experience—from application to closing—with 24/7 access and live status tracking."
+    },
+    "impact": {
+      "reductionTime": "Reduction in processing time",
+      "decreaseErrors": "Decrease in manual errors",
+      "complianceReady": "Compliance audit readiness at any time"
+    }
+  },
+  "resources": {
+    "title": "RESOURCES",
+    "subtitle": "Knowledge Hub (Coming Soon):",
+    "description": "Stay informed and ahead of the curve with resources curated for lending professionals and banking executives.",
+    "upcoming": "Upcoming Resources:",
+    "imageAlt": "Resources",
+    "items": {
+      "videos": "Product Walkthrough Videos",
+      "caseStudies": "Case Studies and Success Stories",
+      "guides": "Compliance Whitepapers and Guides",
+      "webinars": "Industry Webinars and Expert Panels",
+      "blog": "Blog: Trends in Lending, AI in Banking, and More"
+    }
+  },
+  "contactForm": {
+    "requestSent": "Request Sent!",
+    "requestSentDescription": "We’ll be in touch shortly."
+  }
+}
