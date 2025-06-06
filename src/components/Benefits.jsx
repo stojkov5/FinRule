@@ -93,20 +93,26 @@ const Benefits = () => {
   };
 
   return (
-    <div className="benefits-section">
+    <div
+      className="benefits-section"
+      style={{
+        overflow: "visible", // ensure no internal scroll
+        maxHeight: "none",
+      }}
+    >
       <h2 className="benefits-title">{t("benefits.title")}</h2>
       <Row gutter={[32, 32]} className="benefits-row" ref={benefitRef}>
         {benefitsData.map((item, index) => (
           <Col xs={24} md={12} lg={8} key={index}>
             <motion.div
-              className="h-full flex"
               custom={index}
               initial="hidden"
               animate={benefitInView ? "visible" : "hidden"}
               variants={fancyVariants}
+              style={{ height: "100%" }}
             >
               <div className="benefit-card bg-blue-100/10 rounded backdrop-blur-md h-full w-full flex flex-col justify-between">
-                <h3 className="benefit-heading flex items-center gap-2">
+                <h3 className="benefit-heading flex items-center gap-2 flex-wrap">
                   {item.icon}
                   {item.title}
                 </h3>
@@ -122,17 +128,17 @@ const Benefits = () => {
         {impactData.map((item, index) => (
           <Col xs={24} md={12} lg={8} key={index}>
             <motion.div
-              className="h-full flex"
               custom={index}
               initial="hidden"
               animate={impactInView ? "visible" : "hidden"}
               variants={fancyVariants}
+              style={{ height: "100%" }}
             >
               <div className="benefit-card bg-blue-100/10 rounded backdrop-blur-md h-full w-full flex flex-col justify-between">
-                <h3 className="benefit-heading text-center flex justify-center items-center gap-2 text-3xl font-bold">
+                <h3 className="benefit-heading text-center flex flex-col items-center gap-1 text-3xl font-bold">
                   {item.icon}
                   {impactInView && (
-                    <span className="inline-block min-w-[4ch] text-right">
+                    <span className="inline-block text-right whitespace-nowrap max-w-[6ch] overflow-hidden">
                       <CountUp
                         key={countTrigger}
                         end={item.value}
