@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import { Row, Col } from "antd";
+import { Row, Col, Carousel } from "antd";
 import { motion } from "framer-motion";
 import "../styles/Product.css";
 import { useTranslation } from "react-i18next";
@@ -94,6 +94,32 @@ export default function Product() {
                   </motion.div>
                 </Col>
               ))}
+            </Row>
+          </motion.div>
+          <motion.div
+            className="product-carousel"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.3 }}
+            variants={fadeInUp}
+            custom={0.3}
+          >
+           
+
+            <Row justify="center">
+              <Col xs={24} md={16} lg={14} xl={12}>
+                <Carousel autoplay dots>
+                  {[...Array(5)].map((_, index) => (
+                    <div key={index} className="carousel-slide">
+                      <img
+                        src={`/Images/Product/img${index + 1}.png`}
+                        alt={`carousel-${index + 1}`}
+                        className="carousel-image"
+                      />
+                    </div>
+                  ))}
+                </Carousel>
+              </Col>
             </Row>
           </motion.div>
 

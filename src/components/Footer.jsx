@@ -119,13 +119,13 @@ const Footer = () => {
               </motion.h4>
               <ul className="space-y-1 text-sm footer-links text-center md:text-left">
                 <motion.li variants={fadeIn}>
-                  <NavLink to="/privacy" className="footer-link">
+                  <NavLink to="/Privacy.docx" target="_blank" className="footer-link">
                     <Shield className="inline w-4 h-4 mr-2" />
                     {t("footer.privacy")}
                   </NavLink>
                 </motion.li>
                 <motion.li variants={fadeIn}>
-                  <NavLink to="/terms" className="footer-link">
+                  <NavLink to="/Terms.docx" target="_blank" className="footer-link">
                     <FileText className="inline w-4 h-4 mr-2" />
                     {t("footer.terms")}
                   </NavLink>

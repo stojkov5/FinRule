@@ -5,7 +5,6 @@
   font-family: "Montserrat", sans-serif;
 }
 
-
 .product-section {
   padding-top: clamp(5rem, 10vw, 7.5rem);
   color: white;
@@ -66,4 +65,23 @@
 .features,
 .conclusion {
   margin-bottom: clamp(2rem, 4vw, 3rem);
+}
+
+.carousel-slide {
+  text-align: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.carousel-image {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+.slick-dots{
+  bottom: -2% !important;
 }

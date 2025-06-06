@@ -24,7 +24,12 @@ const AnimatedSection = ({ children, direction = "left" }) => {
   };
 
   return (
-    <motion.div ref={ref} initial="hidden" animate={controls} variants={variants}>
+    <motion.div
+      ref={ref}
+      initial="hidden"
+      animate={controls}
+      variants={variants}
+    >
       {children}
     </motion.div>
   );
@@ -36,25 +41,37 @@ const AboutUs = () => {
     {
       title: t("about.companyOverview.title"),
       content: t("about.companyOverview.content"),
+      background: "/Images/About/AI.png",
     },
     {
       title: t("about.coreValues.title"),
       content: (
         <ul className="about-list">
-          <li><strong>{t("about.coreValues.items.innovation")}</strong></li>
-          <li><strong>{t("about.coreValues.items.integrity")}</strong></li>
-          <li><strong>{t("about.coreValues.items.partnership")}</strong></li>
-          <li><strong>{t("about.coreValues.items.scalability")}</strong></li>
+          <li>
+            <strong>{t("about.coreValues.items.innovation")}</strong>
+          </li>
+          <li>
+            <strong>{t("about.coreValues.items.integrity")}</strong>
+          </li>
+          <li>
+            <strong>{t("about.coreValues.items.partnership")}</strong>
+          </li>
+          <li>
+            <strong>{t("about.coreValues.items.scalability")}</strong>
+          </li>
         </ul>
       ),
+      background: "/Images/About/Core.png",
     },
     {
       title: t("about.ourJourney.title"),
       content: t("about.ourJourney.content"),
+      background: "/FinRule.png",
     },
     {
       title: t("about.leadershipTeam.title"),
       content: t("about.leadershipTeam.content"),
+      background: "/Images/About/Leadership.png",
     },
   ];
 
@@ -74,21 +91,37 @@ const AboutUs = () => {
               gutter={[32, 32]}
               justify="space-between"
               align="middle"
-              className="about-row"
+              className="about-row h-full w-full"
             >
               {index % 2 === 0 ? (
                 <>
-                  <Col xs={24} md={16}>
+                  <Col xs={24} md={16} order={{ xs: 2, md: 1 }}>
                     <div className="about-section-box">
                       <h3 className="about-heading">{section.title}</h3>
                       <div className="about-content">{section.content}</div>
                     </div>
                   </Col>
-                  <Col xs={0} md={6} />
+                  <Col xs={24} md={6} order={{ xs: 1, md: 2 }}>
+                    <div className="about-image h-full w-full">
+                      <img
+                        src={section.background}
+                        alt={section.title}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  </Col>
                 </>
               ) : (
                 <>
-                  <Col xs={0} md={6} />
+                  <Col xs={24} md={6}>
+                    <div className="about-image h-full w-full">
+                      <img
+                        src={section.background}
+                        alt={section.title}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  </Col>
                   <Col xs={24} md={16}>
                     <div className="about-section-box">
                       <h3 className="about-heading">{section.title}</h3>
