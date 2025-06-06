@@ -179,22 +179,25 @@ const Home = () => {
               whileInView="visible"
               viewport={{ once: false, amount: 0.2 }}
             >
-              <motion.button
-                whileTap={{ scale: 0.95 }}
-                
-                variants={fadeInUp}
-              >
-                <Link className="home-btn rounded-full px-3 py-3" to={"/contact"}>
-                {t("home.buttons.requestDemo")}
-              </Link>
-               
+              <motion.button whileTap={{ scale: 0.95 }} variants={fadeInUp}>
+                <Link
+                  className="home-btn rounded-full px-3 py-3"
+                  to={"/contact"}
+                >
+                  {t("home.buttons.requestDemo")}
+                </Link>
               </motion.button>
               <motion.button
                 whileTap={{ scale: 0.95 }}
-                className="home-btn rounded-full px-6 py-3"
+                className=""
                 variants={fadeInUp}
               >
-                {t("home.buttons.learn")}
+                <Link
+                  className="home-btn rounded-full px-3 py-3"
+                  to={"/product"}
+                >
+                  {t("home.buttons.learn")}
+                </Link>
               </motion.button>
             </motion.div>
           </motion.div>
