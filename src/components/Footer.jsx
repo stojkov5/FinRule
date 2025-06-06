@@ -125,7 +125,7 @@ const Footer = () => {
                   </NavLink>
                 </motion.li>
                 <motion.li variants={fadeIn}>
-                  <NavLink to="/Terms.docx" target="_blank" className="footer-link">
+                  <NavLink to="/terms" className="footer-link">
                     <FileText className="inline w-4 h-4 mr-2" />
                     {t("footer.terms")}
                   </NavLink>

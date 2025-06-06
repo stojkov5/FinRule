@@ -143,7 +143,7 @@ const Home = () => {
       </motion.div>
 
       {/* Animated Content Section */}
-      <Row justify="center" className="py-20 px-4 md:px-0 bg-[#061e2c]">
+      <Row justify="center" className="py-20 px-4 md:px-0 ">
         <Col xs={24} md={20}>
           <motion.div
             className="p-6 md:p-8 bg-blue-100/10 rounded-2xl backdrop-blur-md text-white"

@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
+
+.terms-container {
+  font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
+}
+
+.terms-heading {
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #ffffff !important;
+  font-weight: 600;
+}
+
+.terms-subheading {
+  font-size: clamp(1.3rem, 2.5vw, 1.75rem);
+  color: #22c55e !important;
+  margin-top: 2.5rem;
+  font-weight: 500;
+}
+
+.terms-paragraph {
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  color: #e5e7eb !important;
+  line-height: 1.75;
+  margin-bottom: 1.25rem;
+}
+
+.terms-divider {
+  border-color: #444;
+  margin: 2rem 0;
+}

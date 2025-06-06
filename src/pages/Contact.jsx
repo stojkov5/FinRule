@@ -201,7 +201,7 @@ const ContactUs = () => {
                       <p>
                         <strong>{t("form.contactDetailsTitle")}</strong>
                       </p>
-                      <p>{t("form.emailLabel")}: info@startfinno.com</p>
+                      <p>{t("form.emailLabel")}: contact@s4p.com.mk</p>
                       <p>{t("form.phoneLabel")}: 708-240-1738</p>
                     </div>
                   </motion.div>

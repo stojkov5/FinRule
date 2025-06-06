@@ -5,6 +5,7 @@ import About from "../src/pages/AboutUs";
 import Contact from "./pages/Contact";
 import Product from "./pages/Product";
 import Solutions from "./pages/Solutions";
+import Terms from "./components/Terms";
 const routes = createBrowserRouter([
   {
     path: "/",
@@ -29,6 +30,11 @@ const routes = createBrowserRouter([
       {
         path: "solutions",
         element: <Solutions />,
+      },
+
+      {
+        path: "terms",
+        element: <Terms />,
       },
     ],
   },
