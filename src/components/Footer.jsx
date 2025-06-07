@@ -40,12 +40,14 @@ const Footer = () => {
       viewport={{ once: false, amount: 0.2 }}
       className="relative text-white mt-10 mb-10 overflow-hidden"
     >
-      {/* Mobile background logo */}
-      <Row justify="center" className="w-full">
+      {/* Footer Container */}
+      <Row justify="center" className="w-full px-4 ">
         <Col
-          span={20}
-          className="w-full bg-blue-100/10 rounded backdrop-blur-md p-5"
+          xs={24}
+          md={20}
+          className="bg-blue-100/10 p-4 rounded backdrop-blur-md  relative"
         >
+          {/* Mobile background logo */}
           <div className="md:hidden absolute inset-0 z-[-1] opacity-50 flex items-center justify-center">
             <img src={Logo} alt="FinRule Logo" className="w-2/3" />
           </div>
@@ -62,7 +64,7 @@ const Footer = () => {
                 <img
                   src={Logo}
                   alt="FinRule Logo"
-                  className="h-full mb-4 animate-pulse"
+                  className="h-full mb-4 animate-pulse max-h-24"
                 />
               </div>
             </Col>
@@ -119,7 +121,11 @@ const Footer = () => {
               </motion.h4>
               <ul className="space-y-1 text-sm footer-links text-center md:text-left">
                 <motion.li variants={fadeIn}>
-                  <NavLink to="/Privacy.docx" target="_blank" className="footer-link">
+                  <NavLink
+                    to="/Privacy.docx"
+                    target="_blank"
+                    className="footer-link"
+                  >
                     <Shield className="inline w-4 h-4 mr-2" />
                     {t("footer.privacy")}
                   </NavLink>
@@ -136,10 +142,11 @@ const Footer = () => {
         </Col>
       </Row>
 
+      {/* Footer note */}
       <motion.div variants={fadeIn}>
         <Row justify="center" className="mt-5">
           <Col span={20} className="text-center text-md text-gray-500">
-            FinRule is a product of S4P IT &amp; Business Consulting.
+            FinRule M7 LLC
           </Col>
         </Row>
       </motion.div>

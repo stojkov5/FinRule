@@ -203,6 +203,18 @@ const ContactUs = () => {
                       </p>
                       <p>{t("form.emailLabel")}: contact@s4p.com.mk</p>
                       <p>{t("form.phoneLabel")}: 708-240-1738</p>
+                      <p>
+                        <strong>Address:</strong> 75 E 3rd St, Sheridan, WY
+                        82801
+                      </p>
+                      <p>
+                        <strong>Branch Florida:</strong> 1776 Polk St, 33020
+                        Hollywood, Florida
+                      </p>
+                      <p>
+                        <strong>Branch Skopje:</strong> 1 Luj Paster St, 1000
+                        Skopje, N. Macedonia
+                      </p>
                     </div>
                   </motion.div>
                 </Col>

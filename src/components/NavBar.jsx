@@ -51,7 +51,11 @@ const Navbar = () => {
           <div className=" relative max-w-7xl m-auto flex items-center justify-between ">
             {/* Logo */}
             <NavLink className=" text-xl font-bold text-gray-800">
-              <img src="./FinRule.png" alt="FinRule" className="h-30 object-contain" />
+              <img
+                src="./FinRule.png"
+                alt="FinRule"
+                className="h-30 object-contain"
+              />
             </NavLink>
 
             {/* Desktop menu */}
@@ -62,14 +66,14 @@ const Navbar = () => {
               <NavLink to="/about" className="nav-link">
                 {t("nav.about")}
               </NavLink>
-              <NavLink to="/contact" className="nav-link">
-                {t("nav.contact")}
+              <NavLink to="/solutions" className="nav-link">
+                {t("nav.solutions")}
               </NavLink>
               <NavLink to="/product" className="nav-link">
                 {t("nav.product")}
               </NavLink>
-              <NavLink to="/solutions" className="nav-link">
-                {t("nav.solutions")}
+              <NavLink to="/contact" className="nav-link">
+                {t("nav.contact")}
               </NavLink>
             </div>
             <div className="hidden lg:flex  items-center space-x-4">
