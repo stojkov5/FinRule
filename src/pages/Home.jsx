@@ -36,7 +36,7 @@ const Home = () => {
         <Col span={20}>
           <Row className="items-center justify-between min-h-screen">
             {/* Text */}
-            <Col xs={24} md={12} className="flex items-center justify-center">
+            <Col xs={24} md={24} className="flex items-center justify-center">
               <motion.div
                 variants={fadeInUp}
                 initial="hidden"
@@ -54,7 +54,7 @@ const Home = () => {
               </motion.div>
             </Col>
 
-            {/* Logo */}
+            {/* Logo
             <Col xs={24} md={12} className="flex items-center justify-center">
               <motion.img
                 src={Logo}
@@ -65,7 +65,7 @@ const Home = () => {
                 viewport={{ once: false, amount: 0.2 }}
                 className="max-w-full h-auto"
               />
-            </Col>
+            </Col> */}
           </Row>
 
           {/* Request a Demo Button */}
