@@ -43,10 +43,10 @@ const ContactUs = () => {
 
     emailjs
       .send(
-        "service_n9n90vs", // Replace with your actual Service ID
-        "template_cerxlr4", // Replace with your actual Template ID
+        "service_2b8cp1d", // Replace with your actual Service ID
+        "template_b09p90p", // Replace with your actual Template ID
         templateParams,
-        "ij19tw5SyjNfq-Sjn" // Replace with your actual Public Key
+        "UL_VP369E9ig_9GwM" // Replace with your actual Public Key
       )
       .then((response) => {
         message.success(t("form.successMessage"));
