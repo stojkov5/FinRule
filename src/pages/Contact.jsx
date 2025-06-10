@@ -43,7 +43,7 @@ const ContactUs = () => {
 
     emailjs
       .send(
-        "service_2b8cp1d", // Replace with your actual Service ID
+        "service_j7ykhi1", // Replace with your actual Service ID
         "template_b09p90p", // Replace with your actual Template ID
         templateParams,
         "UL_VP369E9ig_9GwM" // Replace with your actual Public Key
