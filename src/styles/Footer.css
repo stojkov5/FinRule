@@ -1,5 +1,4 @@
 .footer-links {
-  font-size: 0.75rem;
   font-size: clamp(0.75rem, 0.725rem + 0.125vw, 0.875rem);
 }
 
@@ -19,7 +18,7 @@
   height: 2px;
   bottom: -2px;
   left: 0;
-  background-color: #7dd3fc; /* Tailwind blue-300 */
+  background-color: #7dd3fc;
   transition: width 0.3s ease;
 }
 
@@ -41,7 +40,25 @@
   width: 100%;
 }
 
-/* Icon fix for Safari/macOS */
 .footer-links svg {
   vertical-align: middle;
+}
+
+/* Background logo behind everything */
+.footer-bg-logo {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  opacity: 0.5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.footer-bg-logo img {
+  max-width: 80%;
+  height: auto;
+  object-fit: contain;
 }
