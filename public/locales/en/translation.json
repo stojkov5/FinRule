@@ -9,7 +9,7 @@
   "home": {
     "firstHeading": " TRANSFORMING Banking Through Precision Automation",
     "subHeading": " Revolutionize the way your financial institution operates. Experience faster decision-making, streamlined operations, and enhanced customer engagement with FinRule.",
-    "intro": " FinRule is the next-generation Loan Origination System (LOS) built for midsize banks and credit unions. Our intelligent automation platform enables financial institutions to digitize and optimize every step of the lending journey—from online applications and credit analysis to digital document management and compliance tracking.",
+    "intro": " FinRule is the next-generation Loan Origination System (LOS) built for banks and FIs. Our intelligent automation platform enables financial institutions to digitize and optimize every step of the lending journey—from online applications and credit analysis to digital document management and AI customer and product analysis.",
     "experience": "Experience intelligent lending. Request a demo today or explore how FinRule can fit into your banking infrastructure.",
     "buttons": {
       "requestDemo": "Request Demo",
@@ -31,7 +31,7 @@
     "title": "ABOUT US",
     "companyOverview": {
       "title": "Company Overview",
-      "content": "FinRule is a financial technology company headquartered in the United States, offering AI- powered, cloud-native software solutions that modernize lending operations. Designed specifically for banks with assets ranging from $1 billion to $10 billion, our mission is to help institutions operate with the agility of fintechs while ensuring enterprise-grade reliability and compliance."
+      "content": "FinRule is a financial technology company headquartered in the United States, offering AI- powered, cloud-native software solutions that modernize lending operations. Designed specifically for banks and FI with striving for next level of digitalization, our mission is to help institutions operate with the agility of fintechs while ensuring enterprise-grade reliability and compliance. FinRule solves this by offering a modular LOS platform that digitizes every step of the loan lifecycle: from omnichannel origination and AI-based underwriting to  reporting and credit committee memos.Our API-first platform automates rule-based decisions, modernizes underwriting, and simplifies digital lending."
     },
     "coreValues": {
       "title": "Core Values",
@@ -44,7 +44,7 @@
     },
     "ourJourney": {
       "title": "Our Journey",
-      "content": "Founded by banking transformation veterans, FinRule was created to solve the inefficiencies of legacy LOS systems and to deliver a digital-first solution that simplifies operations while maintaining strict compliance."
+      "content": "Founded by banking transformation veterans, FinRule was created to solve the inefficiencies of legacy LOS systems and to deliver a digital-first solution that simplifies operations while maintaining strict compliance. Over 4,500 small and midsize banks in the US rely on outdated LOS systems, siloed credit workflows, and spreadsheets—exposing them to  risk, slow time-to-decision, and missed revenue opportunities. Lowering Time-to-say-YES but also WHAT as general principle, guided as to construct flexible, modular, efficent platform giving essential focus on end-clients needs"
     },
     "leadershipTeam": {
       "title": "Leadership Team",
@@ -81,26 +81,32 @@
   "product": {
     "heading": "PRODUCT",
     "subheading": "Platform Overview",
-    "description": "FinRule’s Loan Origination System is engineered for digital lending at scale. The platform provides robust automation across every step of the loan lifecycle—allowing lenders to reduce manual work, increase underwriting precision, and meet growing customer expectations for seamless, online services.",
+    "description": "FinRule’s Loan Origination System is engineered for digital lending at scale. The platform provides robust automation across every step of the loan lifecycle—allowing lenders to reduce manual work, increase underwriting precision, and meet growing customer expectations for seamless, online services. FinRule employs an enterprise SaaS model with tiered pricing based on loan volume, user roles, and add-on clients rule-based modules. Integration and onboarding services are billed separately. Premium analytics, CRM integrations, AI preapprovals and automated reporting offer additional monetization. ",
     "features": {
       "workflow": {
         "title": "Custom Workflow Management",
         "points": [
-          "Configure workflows for retail, commercial, or SME loans.",
-          "Enable branch-specific or centralized decision-making processes."
+          "Configure workflows for retail, commercial, or SME loans",
+          "Enable branch-specific or centralized decision-making processes",
+          "Omnichannel digital loan application",
+          "AI-driven document extraction and KYC verification",
+          "Approval routing and board-ready credit memos",
+          "Real-time rule-based flags and audit logs"
         ]
       },
       "document": {
         "title": "Secure Document Management",
         "points": [
           "Real-time access to customer-submitted documents.",
-          "Built-in e-signature and approval flows."
+          "Built-in e-signature and approval flows",
+          "Credit memo automation with routing and approvals."
         ]
       },
       "ai": {
         "title": "AI-Enhanced Underwriting",
         "points": [
           "Analyze risk using automated financial spreading and integrated third-party data sources.",
+          "Automated underwriting, credit modeling and AI-driven pricing engine",
           "Generate credit scores, risk ratings, and term sheets instantly."
         ]
       },
@@ -148,7 +154,7 @@
     },
     "whoWeServe": {
       "title": "Who We Serve:",
-      "point1": "Midsize banks and financial institutions",
+      "point1": "Banks and financial institutions",
       "point2": "Regional credit unions",
       "point3": "Lending subsidiaries and fintech partnerships"
     },
@@ -164,7 +170,7 @@
     "impactTitle": "OPERATIONAL IMPACT",
     "efficiency": {
       "title": "Efficiency",
-      "description": "Digitize every step of the loan journey to remove bottlenecks and eliminate redundancy."
+      "description": "Digitize every step of the loan journey to remove bottlenecks and eliminate redundancy. Low-code module avoids IT vendor dependency giving opportunity for workflow and product management and fast deployment of credit policy changes"
     },
     "accuracy": {
       "title": "Accuracy",
@@ -180,7 +186,7 @@
     },
     "customer": {
       "title": "Customer Experience",
-      "description": "Provide customers with an end-to-end digital experience—from application to closing—with 24/7 access and live status tracking."
+      "description": "Provide customers with an end-to-end digital experience—from application to closing—with 24/7 access and live status tracking. Pre-approval tool to fast check and proposed AI based product recommendation to customers directly connected with potential loan request"
     },
     "impact": {
       "reductionTime": "Reduction in processing time",
