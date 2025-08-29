@@ -35,7 +35,7 @@ const ContactUs = () => {
   const handleSubmit = (values, { resetForm }) => {
     const templateParams = {
       full_name: values.fullName,
-      from_email: values.email,
+      email: values.email,
       organization: values.organization,
       role: values.role,
       message: values.message,
