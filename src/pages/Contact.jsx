@@ -58,6 +58,7 @@ const ContactUs = () => {
         console.error("Email send error:", error);
         message.error(t("form.errorMessage") || "Failed to send message.");
       });
+    console.log("Sending templateParams:", templateParams);
   };
 
   return (
