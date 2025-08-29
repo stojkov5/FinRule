@@ -35,7 +35,7 @@ const ContactUs = () => {
   const handleSubmit = (values, { resetForm }) => {
     const templateParams = {
       full_name: values.fullName,
-      email: values.email,
+      from_email: values.email,
       organization: values.organization,
       role: values.role,
       message: values.message,
@@ -201,7 +201,7 @@ const ContactUs = () => {
                       <p>
                         <strong>{t("form.contactDetailsTitle")}</strong>
                       </p>
-                      <p>{t("form.emailLabel")}: contact@s4p.com.mk</p>
+                      <p>{t("form.emailLabel")}: finance@finrule.io</p>
                       <p>{t("form.phoneLabel")}: 708-240-1738</p>
                       <p>
                         <strong>Address:</strong> 75 E 3rd St, Sheridan, WY
