@@ -4,7 +4,8 @@
     "about": "ABOUT",
     "contact": "CONTACT",
     "product": "PRODUCT",
-    "solutions": "SOLUTIONS"
+    "solutions": "SOLUTIONS",
+    "loan":"LOAN"
   },
   "home": {
     "firstHeading": " TRANSFORMING Banking Through Precision Automation",
@@ -23,6 +24,7 @@
     "contact": "Contact",
     "product": "Product",
     "solutions": "Solution",
+    "loan": "Loan",
     "legal": "Legal",
     "privacy": "Privacy Policy",
     "terms": "Terms of Use"
