@@ -11,6 +11,7 @@ import {
   Mail,
   Shield,
   FileText,
+  Banknote
 } from "lucide-react";
 import Logo from "/FinRule.png";
 import "../styles/Footer.css";
@@ -91,6 +92,12 @@ const Footer = () => {
                     <NavLink to="/solutions" className="footer-link">
                       <Layers className="inline w-4 h-4 mr-2" />
                       {t("footer.solutions")}
+                    </NavLink>
+                  </motion.li>
+                  <motion.li variants={fadeIn}>
+                    <NavLink to="/loan" className="footer-link">
+                      <Banknote className="inline w-4 h-4 mr-2" />
+                      {t("footer.loan")}
                     </NavLink>
                   </motion.li>
                   <motion.li variants={fadeIn}>

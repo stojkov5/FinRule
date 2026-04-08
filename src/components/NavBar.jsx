@@ -72,6 +72,10 @@ const Navbar = () => {
               <NavLink to="/product" className="nav-link">
                 {t("nav.product")}
               </NavLink>
+              <NavLink to="/loan" className="nav-link">
+                {t("nav.loan")}
+              </NavLink>
+
               <NavLink to="/contact" className="nav-link">
                 {t("nav.contact")}
               </NavLink>
@@ -142,7 +146,7 @@ const Navbar = () => {
 
                   {/* Navigation Links */}
                   <div className="flex flex-col items-center justify-center h-full space-y-6 text-xl">
-                    {["/", "/about", "/contact", "/product", "/solutions"].map(
+                    {["/", "/about", "/contact", "/product", "/solutions", "/loan"].map(
                       (path, idx) => (
                         <motion.div key={idx} variants={itemVariants}>
                           <NavLink

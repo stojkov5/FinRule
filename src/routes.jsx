@@ -7,6 +7,7 @@ import Product from "./pages/Product";
 import Solutions from "./pages/Solutions";
 import Terms from "./components/Terms";
 import Privacy from "./components/Privacy";
+import LoanLanding from "./pages/LoanLanding";
 const routes = createBrowserRouter([
   {
     path: "/",
@@ -40,6 +41,10 @@ const routes = createBrowserRouter([
       {
         path: "privacy",
         element: <Privacy />,
+      },
+      {
+        path: "loan",
+        element: <LoanLanding />,
       },
     ],
   },
