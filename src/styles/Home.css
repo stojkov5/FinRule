@@ -59,7 +59,7 @@
   z-index: 2;
 }
 .mobile-hero {
-  background-image: url("/Images/BG1.jpg");
+  background-image: url("/Images/BG2.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -72,7 +72,7 @@
   bottom: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(6px);
+  backdrop-filter: blur(2px);
   z-index: 1;
 }
 
